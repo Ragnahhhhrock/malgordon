@@ -158,7 +158,6 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
   height:100%;
   object-fit:cover;
   object-position:50% 50%;
-  transform:scale(1.32);
   display:block;
 }
 .hero p.lede{margin-top:20px;}
