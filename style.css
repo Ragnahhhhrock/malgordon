@@ -404,6 +404,23 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
   font-size:0.94rem;
   max-width:62ch;
 }
+.entry .entry-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:10px;
+}
+.entry .entry-tag{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.68rem;
+  letter-spacing:0.03em;
+  padding:3px 9px;
+  border-radius:14px;
+  border:1px solid var(--teal-dim);
+  color:var(--teal);
+  background:var(--bg-alt);
+}
+.entry .entry-tag.founder-tag{border-color:var(--gold-dim); color:var(--gold);}
 
 /* -------- project cards -------- */
 .card-grid{
