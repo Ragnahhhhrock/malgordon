@@ -24,6 +24,9 @@
         var next = currentTheme() === "light" ? "dark" : "light";
         try { localStorage.setItem(STORAGE_KEY, next); } catch (e) {}
         applyTheme(next);
+        if (typeof gtag === "function") {
+          gtag("event", "theme_toggle", { theme: next });
+        }
       });
     }
   });
