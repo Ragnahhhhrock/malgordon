@@ -173,3 +173,76 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 with open("favicon.svg", "w") as f:
     f.write(svg)
 print("wrote favicon.svg")
+
+# ---------------------------------------------------------------
+# 3. YouTube channel art — banner (2560x1440, safe area 1546x423
+#    centered) + square avatar (800x800)
+# ---------------------------------------------------------------
+os.makedirs("assets/youtube", exist_ok=True)
+
+BW, BH = 2560, 1440
+banner = Image.new("RGB", (BW, BH), BG)
+bd = ImageDraw.Draw(banner)
+
+glow2 = Image.new("RGBA", (BW, BH), (0, 0, 0, 0))
+g2d = ImageDraw.Draw(glow2)
+gcx, gcy = 420, 250
+for r, a in [(1300, 8), (1000, 11), (700, 15), (450, 18)]:
+    g2d.ellipse([gcx - r, gcy - r, gcx + r, gcy + r], fill=(GOLD[0], GOLD[1], GOLD[2], a))
+banner = Image.alpha_composite(banner.convert("RGBA"), glow2).convert("RGB")
+bd = ImageDraw.Draw(banner)
+
+# safe area for text/logo: centered 1546 x 423 box (YouTube's minimum safe zone)
+safe_w, safe_h = 1546, 423
+safe_x0 = (BW - safe_w) // 2
+safe_y0 = (BH - safe_h) // 2
+
+# ledger rule + dots, left edge of safe area
+rule_x = safe_x0 + 4
+bd.line([(rule_x, safe_y0 + 10), (rule_x, safe_y0 + safe_h - 10)], fill=RULE, width=2)
+dot_ys2 = [safe_y0 + 40, safe_y0 + 110, safe_y0 + 180, safe_y0 + 250, safe_y0 + 320, safe_y0 + 390]
+dot_colors2 = [GOLD, TEAL, GOLD, TEAL, MUTED, GOLD]
+for y, c in zip(dot_ys2, dot_colors2):
+    bd.ellipse([rule_x - 9, y - 9, rule_x + 9, y + 9], fill=BG, outline=c, width=3)
+    if c != MUTED:
+        bd.ellipse([rule_x - 5, y - 5, rule_x + 5, y + 5], fill=c)
+
+text_x = rule_x + 60
+
+eyebrow_f = ImageFont.truetype(MONO_BOLD, 30)
+bd.text((text_x, safe_y0 + 26), "PERTH, WESTERN AUSTRALIA", font=eyebrow_f, fill=GOLD)
+
+name_f = ImageFont.truetype(SERIF, 96)
+bd.text((text_x, safe_y0 + 72), "Malcolm Gordon", font=name_f, fill=INK)
+
+tag_f = ImageFont.truetype(SANS, 34)
+bd.text((text_x, safe_y0 + 200), "Startups · Growth marketing · Perth's founder community",
+         font=tag_f, fill=INK_DIM)
+
+url_f = ImageFont.truetype(MONO_BOLD, 30)
+bd.text((text_x, safe_y0 + 260), "malgordon.com", font=url_f, fill=GOLD)
+handle_f = ImageFont.truetype(MONO, 26)
+bd.text((text_x, safe_y0 + 305), "@MalcolmGordonliveshere", font=handle_f, fill=MUTED)
+
+banner.save("assets/youtube/banner.png", "PNG", optimize=True)
+print("wrote assets/youtube/banner.png", banner.size)
+
+# square avatar, using the real headshot cropped to a clean square
+# (YouTube applies its own circular mask on top of a square upload)
+photo_path = "assets/malcolm-gordon.jpg"
+if os.path.exists(photo_path):
+    av = Image.open(photo_path).convert("RGB")
+    side = min(av.size)
+    left = (av.width - side) // 2
+    top = (av.height - side) // 2
+    av = av.crop((left, top, left + side, top + side)).resize((800, 800), Image.LANCZOS)
+    # thin ledger-toned ring frame to tie back to the site's avatar treatment
+    framed = Image.new("RGB", (800, 800), BG_ALT)
+    fd = ImageDraw.Draw(framed)
+    fd.ellipse([0, 0, 799, 799], fill=BG_ALT)
+    mask2 = Image.new("L", (800, 800), 0)
+    ImageDraw.Draw(mask2).ellipse([14, 14, 785, 785], fill=255)
+    framed.paste(av, (0, 0), mask2)
+    fd.ellipse([2, 2, 797, 797], outline=RULE, width=4)
+    framed.save("assets/youtube/avatar.png", "PNG", optimize=True)
+    print("wrote assets/youtube/avatar.png", framed.size)
