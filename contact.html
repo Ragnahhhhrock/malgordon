@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-63TCCBKFQD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-63TCCBKFQD');
+</script>
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem("mg-theme");
+    if(!t){ t = "dark"; }
+    document.documentElement.setAttribute("data-theme", t);
+  }catch(e){ document.documentElement.setAttribute("data-theme","dark"); }
+})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Malcolm Gordon</title>
+<meta name="description" content="Get in touch with Malcolm Gordon — startup mentor and growth marketer in Perth, Western Australia.">
+<meta name="keywords" content="contact Malcolm Gordon, Perth startup mentor contact, growth marketer contact">
+<link rel="canonical" href="https://malgordon.com/contact.html">
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.ico">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Malcolm Gordon">
+<meta property="og:title" content="Contact — Malcolm Gordon">
+<meta property="og:description" content="Get in touch with Malcolm Gordon — startup mentor and growth marketer in Perth, Western Australia.">
+<meta property="og:url" content="https://malgordon.com/contact.html">
+<meta property="og:image" content="https://malgordon.com/assets/social-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@malgordon">
+<meta name="twitter:title" content="Contact — Malcolm Gordon">
+<meta name="twitter:description" content="Get in touch with Malcolm Gordon — startup mentor and growth marketer in Perth, Western Australia.">
+<meta name="twitter:image" content="https://malgordon.com/assets/social-share.png">
+
+<link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="tick">●</span> Malcolm Gordon</a>
+    <nav class="site-nav">
+      <a href="index.html#stats">The Numbers</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#ledger">Career Ledger</a>
+      <a href="contact.html">Contact</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark and light mode"><span class="icon">☾</span><span class="label">Dark</span></button>
+    </nav>
+  </div>
+</header>
+
+<section class="project-hero">
+  <div class="wrap">
+    <a class="back-link" href="index.html">← back home</a>
+    <span class="status">● get in touch</span>
+    <h1>Contact</h1>
+    <p class="lede">
+      Got a project, a mentoring question, or just want to talk shop? Drop a note below —
+      it goes straight to my inbox — or reach out on any of the socials in the footer.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="max-width:600px;">
+    <form id="contact-form" action="https://formspree.io/f/xqpzkyqv" method="POST" class="contact-form">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+      <!-- honeypot field — hidden from real users, bots tend to fill it in -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="New message from malgordon.com">
+
+      <button type="submit" class="btn-outline-gold" style="align-self:flex-start;" id="contact-submit">Send message →</button>
+      <p id="contact-status" class="contact-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<footer id="contact-footer">
+  <div class="wrap">
+    <p>© 2026 Malcolm Gordon · Perth, WA · mal@malgordon.com</p>
+    <div class="social-row">
+      <a href="https://x.com/malgordon/" target="_blank" rel="noopener">X</a>
+      <a href="https://www.linkedin.com/in/malcolmgordon/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.facebook.com/malcolm.gordon" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/malgordon/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@mal_gordon" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.youtube.com/@MalcolmGordonliveshere" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById("contact-form");
+  var status = document.getElementById("contact-status");
+  var btn = document.getElementById("contact-submit");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    status.textContent = "";
+    status.className = "contact-status";
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    }).then(function (response) {
+      if (response.ok) {
+        form.reset();
+        status.textContent = "Thanks — message sent. I'll get back to you soon.";
+        status.classList.add("success");
+        btn.textContent = "Sent ✓";
+        if (typeof gtag === "function") {
+          gtag("event", "contact_form_submit", { status: "success" });
+        }
+      } else {
+        throw new Error("submit failed");
+      }
+    }).catch(function () {
+      status.textContent = "Something went wrong — please email mal@malgordon.com directly.";
+      status.classList.add("error");
+      btn.disabled = false;
+      btn.textContent = "Send message →";
+      if (typeof gtag === "function") {
+        gtag("event", "contact_form_submit", { status: "error" });
+      }
+    });
+  });
+})();
+</script>
+
+<script src="theme.js"></script>
+<script src="analytics-events.js"></script>
+</body>
+</html>
