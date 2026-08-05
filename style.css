@@ -304,6 +304,37 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
   margin:-22px 0 30px;
 }
 
+/* -------- ledger filter bar -------- */
+.filter-bar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0 0 30px;
+}
+.filter-btn{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem;
+  letter-spacing:0.03em;
+  color:var(--ink-dim);
+  background:var(--card);
+  border:1px solid var(--rule);
+  padding:8px 16px;
+  border-radius:20px;
+  cursor:pointer;
+  transition:border-color .15s, color .15s, background .15s;
+}
+.filter-btn:hover{border-color:var(--gold-dim); color:var(--ink);}
+.filter-btn.active{
+  border-color:var(--gold);
+  color:var(--gold);
+  background:var(--card-hi);
+}
+.filter-btn.active[data-filter="all"]{
+  border-color:var(--ink-dim);
+  color:var(--ink);
+}
+.entry.is-hidden{display:none;}
+
 /* -------- the ledger (timeline) -------- */
 .ledger{
   position:relative;
