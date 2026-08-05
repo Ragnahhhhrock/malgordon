@@ -27,6 +27,24 @@
   --maxw:      880px;
 }
 
+:root[data-theme="light"]{
+  --bg:        #F4F0E4;
+  --bg-alt:    #ECE6D4;
+  --card:      #FFFFFF;
+  --card-hi:   #F8F4E9;
+  --rule:      #DAD3BC;
+  --ink:       #211F19;
+  --ink-dim:   #4B4739;
+  --muted:     #847C64;
+  --gold:      #9C7811;
+  --gold-dim:  #C9A227;
+  --teal:      #2B6D5E;
+  --teal-dim:  #3E8C7C;
+  --rust:      #B5502F;
+}
+
+body{transition:background-color .2s ease, color .2s ease;}
+
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
@@ -90,6 +108,26 @@ nav.site-nav a{
   transition:color .15s, border-color .15s;
 }
 nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
+
+.theme-toggle{
+  margin-left:22px;
+  background:none;
+  border:1px solid var(--rule);
+  color:var(--ink-dim);
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  padding:6px 11px;
+  border-radius:20px;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  transition:border-color .15s, color .15s;
+}
+.theme-toggle:hover{border-color:var(--gold); color:var(--gold);}
+.theme-toggle .icon{font-size:0.85rem;}
 
 /* -------- hero -------- */
 .hero{

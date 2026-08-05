@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem("mg-theme");
+    if(!t){ t = "dark"; }
+    document.documentElement.setAttribute("data-theme", t);
+  }catch(e){ document.documentElement.setAttribute("data-theme","dark"); }
+})();
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AdShirts — Malcolm Gordon</title>
@@ -16,6 +26,7 @@
       <a href="../index.html#ledger">Career Ledger</a>
       <a href="../index.html#projects">Projects</a>
       <a href="../index.html#contact">Contact</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark and light mode"><span class="icon">☾</span><span class="label">Dark</span></button>
     </nav>
   </div>
 </header>
@@ -68,5 +79,6 @@
   </div>
 </footer>
 
+<script src="../theme.js"></script>
 </body>
 </html>
