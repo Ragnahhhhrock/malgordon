@@ -137,6 +137,36 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
     radial-gradient(ellipse 900px 400px at 15% -10%, rgba(201,162,39,0.08), transparent 60%),
     var(--bg);
 }
+.hero .hero-inner{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:48px;
+}
+.hero .hero-copy{flex:1 1 auto; min-width:0;}
+.hero .hero-photo{
+  flex:0 0 auto;
+  width:168px;
+  height:168px;
+  border-radius:50%;
+  overflow:hidden;
+  border:1px solid var(--rule);
+  box-shadow:0 0 0 6px var(--bg-alt);
+}
+.hero .hero-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  filter:grayscale(0.25) contrast(1.03);
+}
+@media (max-width:720px){
+  .hero .hero-inner{flex-direction:column-reverse; align-items:center; text-align:center; gap:26px;}
+  .hero .hero-copy{width:100%;}
+  .hero p.lede{margin-left:auto; margin-right:auto;}
+  .ticker-strip{justify-content:center;}
+  .social-row{justify-content:center;}
+}
 .hero .eyebrow{
   font-family:'IBM Plex Mono', monospace;
   font-size:0.78rem;
