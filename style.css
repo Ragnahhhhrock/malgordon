@@ -221,26 +221,25 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 /* -------- stat blocks -------- */
 .stat-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+  gap:18px;
 }
 .stat-block{
   background:var(--card);
   border:1px solid var(--rule);
-  border-left:3px solid var(--gold-dim);
   border-radius:var(--radius);
-  padding:36px 32px 32px;
+  padding:22px;
   display:flex;
   flex-direction:column;
-  gap:14px;
-  transition:background .15s, border-color .15s, transform .15s;
+  gap:10px;
+  transition:border-color .15s, background .15s, transform .15s;
 }
-.stat-block:hover{background:var(--card-hi); transform:translateY(-2px);}
-.stat-block.teal{border-left-color:var(--teal-dim);}
+.stat-block:hover{border-color:var(--gold-dim); background:var(--card-hi); transform:translateY(-2px);}
+.stat-block.teal:hover{border-color:var(--teal-dim);}
 
 .stat-block .icon-badge{
-  width:56px;
-  height:56px;
+  width:36px;
+  height:36px;
   border-radius:var(--radius);
   border:1px solid var(--gold-dim);
   background:var(--bg-alt);
@@ -250,12 +249,12 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
   color:var(--gold);
 }
 .stat-block.teal .icon-badge{border-color:var(--teal-dim); color:var(--teal);}
-.stat-block .icon-badge svg{width:28px; height:28px;}
+.stat-block .icon-badge svg{width:19px; height:19px;}
 
 .stat-block .stat-eyebrow{
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.74rem;
-  letter-spacing:0.12em;
+  font-size:0.7rem;
+  letter-spacing:0.1em;
   text-transform:uppercase;
   color:var(--gold);
 }
@@ -264,17 +263,16 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 .stat-block .stat-number{
   font-family:'Fraunces', serif;
   font-weight:600;
-  font-size:clamp(2.6rem, 6vw, 4rem);
+  font-size:1.5rem;
   line-height:1;
   color:var(--ink);
-  margin:2px 0;
 }
 .stat-block .stat-desc{
   margin:0;
   font-family:'IBM Plex Sans', sans-serif;
-  font-size:1rem;
+  font-size:0.9rem;
   color:var(--ink-dim);
-  max-width:32ch;
+  flex-grow:1;
 }
 
 /* -------- section headings -------- */
