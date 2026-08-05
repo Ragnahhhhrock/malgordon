@@ -60,16 +60,20 @@ d.text((margin_x, 316), "marketing systems &", font=tagline_font, fill=INK_DIM)
 d.text((margin_x, 364), "the occasional viral idea.", font=tagline_font, fill=INK_DIM)
 
 # ticker strip stats
-stat_font = ImageFont.truetype(MONO, 22)
-stat_font_b = ImageFont.truetype(MONO_BOLD, 22)
-stats = [("15+ YRS", " digital marketing"), ("12+ YRS", " startup mentoring"), ("9", " ventures built")]
+stat_font = ImageFont.truetype(MONO, 19)
+stat_font_b = ImageFont.truetype(MONO_BOLD, 19)
+stats = [("15+ YRS", " marketing"), ("12+ YRS", " mentoring"), ("9", " ventures built")]
 sx = margin_x
-sy = 445
+sy = 447
+max_x = W - 90 - 300 - 40
 for bold_part, rest in stats:
-    d.text((sx, sy), bold_part, font=stat_font_b, fill=INK)
     bw = d.textlength(bold_part, font=stat_font_b)
+    rw = d.textlength(rest, font=stat_font)
+    if sx + bw + rw > max_x:
+        break
+    d.text((sx, sy), bold_part, font=stat_font_b, fill=INK)
     d.text((sx + bw, sy), rest, font=stat_font, fill=MUTED)
-    sx += bw + d.textlength(rest, font=stat_font) + 46
+    sx += bw + rw + 32
 
 # bottom rule + url
 d.line([(margin_x, 512), (W - 90, 512)], fill=RULE, width=1)
@@ -78,6 +82,39 @@ d.text((margin_x, 540), "malgordon.com", font=url_font, fill=GOLD)
 
 sub_font = ImageFont.truetype(MONO, 20)
 d.text((margin_x, 576), "Startup community builder · Growth marketer", font=sub_font, fill=MUTED)
+
+# --- profile photo, circular, right side ---
+photo_path = "assets/malcolm-gordon.jpg"
+if os.path.exists(photo_path):
+    photo_d = 280
+    photo = Image.open(photo_path).convert("RGB")
+    side = min(photo.size)
+    left = (photo.width - side) // 2
+    top = (photo.height - side) // 2
+    photo = photo.crop((left, top, left + side, top + side)).resize((photo_d, photo_d), Image.LANCZOS)
+
+    mask = Image.new("L", (photo_d, photo_d), 0)
+    mdraw = ImageDraw.Draw(mask)
+    mdraw.ellipse([0, 0, photo_d, photo_d], fill=255)
+
+    px = W - 90 - photo_d
+    py = (H - photo_d) // 2
+
+    # ring behind photo matching --bg-alt, plus thin rule border
+    ring_pad = 8
+    img_rgba = img.convert("RGBA")
+    ring_layer = ImageDraw.Draw(img_rgba)
+    ring_layer.ellipse(
+        [px - ring_pad, py - ring_pad, px + photo_d + ring_pad, py + photo_d + ring_pad],
+        fill=BG_ALT,
+    )
+    ring_layer.ellipse(
+        [px - ring_pad, py - ring_pad, px + photo_d + ring_pad, py + photo_d + ring_pad],
+        outline=RULE, width=2,
+    )
+    img_rgba.paste(photo, (px, py), mask)
+    img = img_rgba.convert("RGB")
+    d = ImageDraw.Draw(img)
 
 img.save("assets/social-share.png", "PNG", optimize=True)
 print("wrote assets/social-share.png", img.size)
