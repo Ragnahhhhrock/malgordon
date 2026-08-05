@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<rect x="0.5" y="0.5" width="63" height="63" rx="14" fill="rgb(15, 20, 27)" stroke="rgb(42, 52, 65)"/>
+<text x="32" y="45" font-family="Georgia, 'DejaVu Serif', serif" font-weight="700"
+ font-size="34" fill="rgb(201, 162, 39)" text-anchor="middle">M</text>
+<circle cx="49" cy="15" r="4.5" fill="rgb(201, 162, 39)"/>
+</svg>
