@@ -221,36 +221,60 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 /* -------- stat blocks -------- */
 .stat-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-  gap:1px;
-  background:var(--rule);
-  border:1px solid var(--rule);
-  border-radius:var(--radius);
-  overflow:hidden;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:20px;
 }
 .stat-block{
   background:var(--card);
-  padding:30px 26px;
+  border:1px solid var(--rule);
+  border-left:3px solid var(--gold-dim);
+  border-radius:var(--radius);
+  padding:36px 32px 32px;
   display:flex;
   flex-direction:column;
-  gap:8px;
-  transition:background .15s;
+  gap:14px;
+  transition:background .15s, border-color .15s, transform .15s;
 }
-.stat-block:hover{background:var(--card-hi);}
+.stat-block:hover{background:var(--card-hi); transform:translateY(-2px);}
+.stat-block.teal{border-left-color:var(--teal-dim);}
+
+.stat-block .icon-badge{
+  width:56px;
+  height:56px;
+  border-radius:var(--radius);
+  border:1px solid var(--gold-dim);
+  background:var(--bg-alt);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--gold);
+}
+.stat-block.teal .icon-badge{border-color:var(--teal-dim); color:var(--teal);}
+.stat-block .icon-badge svg{width:28px; height:28px;}
+
+.stat-block .stat-eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.74rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+.stat-block.teal .stat-eyebrow{color:var(--teal);}
+
 .stat-block .stat-number{
   font-family:'Fraunces', serif;
   font-weight:600;
-  font-size:clamp(2rem, 4vw, 2.6rem);
+  font-size:clamp(2.6rem, 6vw, 4rem);
   line-height:1;
-  color:var(--gold);
+  color:var(--ink);
+  margin:2px 0;
 }
-.stat-block.teal .stat-number{color:var(--teal);}
-.stat-block .stat-label{
-  font-family:'IBM Plex Mono', monospace;
-  font-size:0.8rem;
-  letter-spacing:0.02em;
+.stat-block .stat-desc{
+  margin:0;
+  font-family:'IBM Plex Sans', sans-serif;
+  font-size:1rem;
   color:var(--ink-dim);
-  line-height:1.4;
+  max-width:32ch;
 }
 
 /* -------- section headings -------- */
