@@ -304,6 +304,48 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
   margin:-22px 0 30px;
 }
 
+/* -------- tabs (ledger / recommendations / volunteering / qualifications) -------- */
+.tab-bar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:34px;
+}
+.tab-panel[hidden]{display:none;}
+
+/* -------- recommendation cards -------- */
+.rec-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  gap:18px;
+}
+.rec-card{
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:var(--radius);
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.rec-card .rec-quote{
+  margin:0;
+  font-family:'Fraunces', serif;
+  font-size:1.02rem;
+  font-style:italic;
+  color:var(--ink);
+  line-height:1.5;
+}
+.rec-card .rec-quote::before{content:"“"; color:var(--gold);}
+.rec-card .rec-quote::after{content:"”"; color:var(--gold);}
+.rec-card .rec-attr{
+  margin:0;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem;
+  color:var(--muted);
+}
+.rec-card .rec-attr strong{color:var(--ink-dim); font-weight:600;}
+
 /* -------- ledger filter bar -------- */
 .filter-bar{
   display:flex;

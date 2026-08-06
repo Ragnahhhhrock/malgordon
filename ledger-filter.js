@@ -31,7 +31,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     var bar = document.querySelector(".filter-bar");
-    var entries = Array.prototype.slice.call(document.querySelectorAll(".ledger .entry"));
+    var entries = Array.prototype.slice.call(document.querySelectorAll("#tab-ledger .ledger .entry"));
 
     injectTagPills(entries);
 
