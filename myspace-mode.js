@@ -10,6 +10,62 @@
     { name: "YouTube", url: "https://www.youtube.com/@MalcolmGordonliveshere" }
   ];
 
+  var STATUS_UPDATES = [
+    {
+      text: "malcolm is... starting ANOTHER startup nobody asked for (WouldPietEat, Hornet Bay, PropCheq). story of my life tbh. -__-",
+      meta: "posted 11:47pm &middot; mood: overwhelmed"
+    },
+    {
+      text: "malcolm is feeling unstoppable rn. 1,000+ founders mentored and still nobody claps when i walk into a room :'(",
+      meta: "posted 9:03pm &middot; mood: misunderstood"
+    },
+    {
+      text: "malcolm is $10M+ in ad spend deep and still counting down the days till friday. adulthood is a SCAM",
+      meta: "posted 4:20pm &middot; mood: exhausted"
+    },
+    {
+      text: "malcolm is done pretending Online Marketing (97/100) doesn't run through his veins. this is who i am now. no takebacks.",
+      meta: "posted 1:14am &middot; mood: reflective"
+    },
+    {
+      text: "malcolm is... mentoring startup founders since 2014 and yet NOBODY mentors ME. who's gonna hold ME when i cry",
+      meta: "posted 10:58pm &middot; listening to: something depressing probably"
+    },
+    {
+      text: "malcolm is organizing ANOTHER Somersoft &amp; PropertyChat meetup. 20+ events deep, hundreds of strangers know my face and still nobody really KNOWS me",
+      meta: "posted 7:32pm &middot; mood: lonely but productive"
+    },
+    {
+      text: "malcolm is thinking about AdShirts again. it flopped. some of us just weren't meant to be understood in our time.",
+      meta: "posted 2:11am &middot; mood: misunderstood genius"
+    },
+    {
+      text: "malcolm's stats: Entrepreneurship 96/100. Social Life: currently loading... please wait...",
+      meta: "posted 6:45pm &middot; mood: it is what it is"
+    },
+    {
+      text: "malcolm is remembering when Blingvaders went viral in 3 countries and still feeling alone in this town. numbers don't fix everything guys",
+      meta: "posted 12:32am &middot; mood: nostalgic"
+    },
+    {
+      text: "malcolm is facilitating ANOTHER Plus Eight workshop bc apparently that's what i do now instead of having feelings about things",
+      meta: "posted 8:17pm &middot; mood: coping through productivity"
+    }
+  ];
+
+  function buildStatuses() {
+    var el = document.createElement("div");
+    el.className = "myspace-statuses";
+    el.id = "myspace-statuses-el";
+    var items = STATUS_UPDATES.map(function (s) {
+      return '<li><b>malcolm gordon</b> ' + s.text.replace(/^malcolm/, "") +
+        '<span class="status-date">' + s.meta + "</span></li>";
+    }).join("");
+    // the replace above strips a leading "malcolm" so we don't double it after <b>
+    el.innerHTML = "<h4>☆ status updates ☆</h4><ul>" + items + "</ul>";
+    return el;
+  }
+
   function buildMarquee() {
     var wrap = document.createElement("div");
     wrap.className = "myspace-marquee";
@@ -85,7 +141,7 @@
   }
 
   function teardown() {
-    ["myspace-marquee-el", "myspace-counter-el", "myspace-topfriends-el", "myspace-player-el"].forEach(function (id) {
+    ["myspace-marquee-el", "myspace-statuses-el", "myspace-counter-el", "myspace-topfriends-el", "myspace-player-el"].forEach(function (id) {
       var el = document.getElementById(id);
       if (el) {
         var audio = el.querySelector("audio");
@@ -102,6 +158,9 @@
 
     if (on) {
       buildMarquee();
+      var marqueeEl = document.getElementById("myspace-marquee-el");
+      var statusesEl = buildStatuses();
+      if (marqueeEl) marqueeEl.insertAdjacentElement("afterend", statusesEl);
       buildCounter();
       buildTopFriends();
       buildPlayer();

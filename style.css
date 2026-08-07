@@ -130,7 +130,7 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 .theme-toggle .icon{font-size:0.85rem;}
 
 /* ============================================================
-   MYSPACE MODE — a loving, chaotic homage to circa-2006 profile pages
+   MYSPACE MODE — a loving, chaotic homage to circa-2005 profile pages
    ============================================================ */
 body.myspace-mode{
   font-family:'Comic Sans MS', 'Comic Sans', cursive, sans-serif !important;
@@ -315,9 +315,53 @@ body.myspace-mode header.site-head{
   line-height:1.4;
 }
 
+/* status updates bulletin board — career history, emo-teen voice */
+.myspace-statuses{
+  max-width:600px;
+  margin:0 auto 20px;
+  background:#fff0fa;
+  border:3px ridge #ff33cc;
+  padding:14px 16px;
+  font-family:'Comic Sans MS', cursive !important;
+  color:#3a0050;
+  box-shadow:5px 5px 0 rgba(0,0,0,0.4);
+}
+.myspace-statuses h4{
+  margin:0 0 10px;
+  text-align:center;
+  color:#c800a0;
+  font-size:1rem;
+  letter-spacing:0.5px;
+}
+.myspace-statuses ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.myspace-statuses li{
+  background:#fff;
+  border:1px dashed #ff99e6;
+  border-radius:6px;
+  padding:8px 10px;
+  font-size:0.82rem;
+  line-height:1.45;
+}
+.myspace-statuses li b{color:#c800a0;}
+.myspace-statuses li .status-date{
+  display:block;
+  font-size:0.65rem;
+  color:#999;
+  margin-top:4px;
+  font-family:'Courier New', monospace !important;
+}
+
 @media (max-width:720px){
   .myspace-topfriends{display:none;}
   .myspace-player{width:180px;}
+  .myspace-statuses{margin-left:16px; margin-right:16px;}
 }
 
 /* ============================================================
