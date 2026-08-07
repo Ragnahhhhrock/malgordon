@@ -49,5 +49,26 @@
         });
       });
     });
+
+    // 4. MalSpace nav link click (navigates to /malspace/)
+    var malspaceLink = document.getElementById("myspace-toggle");
+    if (malspaceLink) {
+      malspaceLink.addEventListener("click", function () {
+        gaEvent("malspace_nav_click", {
+          from_page: window.location.pathname
+        });
+      });
+    }
+
+    // 5. Theme toggle (dark/light)
+    var themeBtn = document.getElementById("theme-toggle");
+    if (themeBtn) {
+      themeBtn.addEventListener("click", function () {
+        setTimeout(function () {
+          var theme = document.documentElement.getAttribute("data-theme") || "unknown";
+          gaEvent("theme_toggle_click", { switched_to: theme });
+        }, 0);
+      });
+    }
   });
 })();

@@ -210,11 +210,89 @@
     if (p && typeof p.catch === "function") p.catch(function () {});
   }
 
+  function gaEvent(name, params) {
+    if (typeof gtag === "function") {
+      gtag("event", name, params || {});
+    }
+  }
+
+  function trackAudio(root) {
+    var audio = root.querySelector("#ms-audio");
+    if (!audio) return;
+
+    audio.addEventListener("play", function () {
+      gaEvent("malspace_audio_play", {
+        track: "Malgordon Glow",
+        current_time: Math.round(audio.currentTime)
+      });
+    });
+    audio.addEventListener("pause", function () {
+      // ignore the pause fired when the track naturally ends+loops
+      if (audio.ended) return;
+      gaEvent("malspace_audio_pause", {
+        track: "Malgordon Glow",
+        current_time: Math.round(audio.currentTime)
+      });
+    });
+    audio.addEventListener("ended", function () {
+      gaEvent("malspace_audio_complete", { track: "Malgordon Glow" });
+    });
+
+    // milestone tracking: fire once when playback crosses 25/50/75%
+    var firedMilestones = {};
+    audio.addEventListener("timeupdate", function () {
+      if (!audio.duration) return;
+      var pct = Math.floor((audio.currentTime / audio.duration) * 100);
+      [25, 50, 75].forEach(function (m) {
+        if (pct >= m && !firedMilestones[m]) {
+          firedMilestones[m] = true;
+          gaEvent("malspace_audio_progress", { track: "Malgordon Glow", percent: m });
+        }
+      });
+    });
+  }
+
+  function trackInteractions(root) {
+    var exitLink = root.querySelector("#ms-exit-btn");
+    if (exitLink) {
+      exitLink.addEventListener("click", function () {
+        gaEvent("malspace_exit_click", {});
+      });
+    }
+
+    root.querySelectorAll(".ms-contact-list a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        gaEvent("malspace_contact_click", {
+          link_text: a.textContent.trim(),
+          destination: a.getAttribute("href")
+        });
+      });
+    });
+
+    root.querySelectorAll(".ms-friend a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        gaEvent("malspace_friend_click", {
+          friend_name: a.textContent.trim(),
+          destination: a.getAttribute("href")
+        });
+      });
+    });
+
+    var viewPics = root.querySelector(".ms-viewpics a");
+    if (viewPics) {
+      viewPics.addEventListener("click", function () {
+        gaEvent("malspace_view_pics_click", {});
+      });
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var root = buildProfile();
     document.body.appendChild(root);
     updateCounter(root);
     playSong(root);
+    trackAudio(root);
+    trackInteractions(root);
 
     if (typeof gtag === "function") {
       gtag("event", "malspace_page_view", {});
