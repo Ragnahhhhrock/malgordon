@@ -38,7 +38,8 @@
 
   var LOGO_MAP = {
     "Buildcloud": "/assets/logos/buildcloud.png",
-    "Blingvaders": "/assets/logos/blingvaders.jpg"
+    "Blingvaders": "/assets/logos/blingvaders.jpg",
+    "Aluminium West": "/assets/logos/aluminiumwest.png"
   };
 
   var STOP_WORDS = ["the", "of", "and", "for", "at", "in", "on", "a", "an"];
