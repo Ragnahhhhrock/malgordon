@@ -5,11 +5,11 @@
 
   var TOP8 = [
     { name: "Tom", photo: "/assets/myspace/tom.jpg", url: null },
-    { name: "Jack", photo: "/assets/myspace/friends/jack.jpg", url: null },
-    { name: "Jurgen", photo: "/assets/myspace/friends/jurgen.jpg", url: null },
+    { name: "JurgMeister", photo: "/assets/myspace/friends/jurgen.jpg", url: null },
+    { name: "Br1ttz_xo", photo: "/assets/myspace/friends/f3.png", url: null },
     { name: "T0xicKitten*", photo: "/assets/myspace/friends/f4.png", url: null },
-    { name: "MC_Fr3sh2005", photo: "/assets/myspace/friends/f5.png", url: null },
-    { name: "$t4rBoy_87", photo: "/assets/myspace/friends/f6.png", url: null },
+    { name: "*StAy_GoLD*", photo: "/assets/myspace/friends/jack.jpg", url: null },
+    { name: "Temple-Pilot", photo: "/assets/myspace/friends/todd.jpg", url: null },
     { name: "Ch4osQu33n_x", photo: "/assets/myspace/friends/f7.png", url: null },
     { name: "L1lRebel_Xx", photo: "/assets/myspace/friends/f8.png", url: null }
   ];
@@ -182,7 +182,7 @@
       "</div></div>" +
 
       '<div class="ms-module">' +
-      '<div class="ms-module-title">Malcolm Gordon\'s Friend Space (has 8 friends)</div>' +
+      '<div class="ms-module-title">Top Friends (has 3,042 friends)</div>' +
       '<div class="ms-module-body"><div class="ms-friend-grid">' + friendsHtml + "</div></div></div>" +
 
       '<div class="ms-module" id="ms-pics">' +
