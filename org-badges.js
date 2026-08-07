@@ -35,6 +35,10 @@
     "Wesley College": "WC"
   };
 
+  var LOGO_MAP = {
+    "Buildcloud": "/assets/logos/buildcloud.png"
+  };
+
   var STOP_WORDS = ["the", "of", "and", "for", "at", "in", "on", "a", "an"];
 
   function fallbackInitials(text) {
@@ -55,15 +59,23 @@
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".entry > h3").forEach(function (h3) {
       var text = h3.textContent.trim();
-      var initials = initialsFor(text);
 
       var wrapper = document.createElement("div");
       wrapper.className = "entry-title-row";
 
       var badge = document.createElement("span");
       badge.className = "org-badge";
-      badge.textContent = initials;
       badge.setAttribute("aria-hidden", "true");
+
+      if (LOGO_MAP.hasOwnProperty(text)) {
+        badge.classList.add("org-badge-logo");
+        var img = document.createElement("img");
+        img.src = LOGO_MAP[text];
+        img.alt = "";
+        badge.appendChild(img);
+      } else {
+        badge.textContent = initialsFor(text);
+      }
 
       h3.parentNode.insertBefore(wrapper, h3);
       wrapper.appendChild(badge);

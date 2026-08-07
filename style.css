@@ -651,6 +651,14 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 .entry.venture .org-badge{border-color:var(--gold-dim); color:var(--gold);}
 .entry.role .org-badge{border-color:var(--teal-dim); color:var(--teal);}
 .entry.mentor .org-badge{border-color:var(--rule); color:var(--muted);}
+.org-badge.org-badge-logo{
+  padding:4px;
+}
+.org-badge.org-badge-logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
 
 .entry h3{
   font-family:'Fraunces', serif;
