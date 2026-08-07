@@ -677,6 +677,12 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
   font-size:0.92rem;
   margin:0 0 6px;
 }
+.entry .meta-note{
+  color:var(--muted);
+  font-size:0.85rem;
+  font-style:italic;
+  margin:0 0 8px;
+}
 .entry p.desc{
   margin:0;
   color:var(--ink-dim);
