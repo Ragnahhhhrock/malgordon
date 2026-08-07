@@ -624,51 +624,11 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 .entry.venture .kind{color:var(--gold); border-color:var(--gold-dim);}
 .entry.role .kind{color:var(--teal); border-color:var(--teal-dim);}
 
-/* -------- org badges (standardized initials mark per entry) -------- */
-.entry-title-row{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin:6px 0 4px;
-}
-.entry-title-row h3{margin:0;}
-.org-badge{
-  flex:0 0 auto;
-  width:34px;
-  height:34px;
-  border-radius:var(--radius);
-  border:1px solid var(--muted);
-  background:var(--bg-alt);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:'IBM Plex Mono', monospace;
-  font-weight:700;
-  font-size:0.66rem;
-  letter-spacing:0.02em;
-  color:var(--muted);
-}
-.entry.venture .org-badge{border-color:var(--gold-dim); color:var(--gold);}
-.entry.role .org-badge{border-color:var(--teal-dim); color:var(--teal);}
-.entry.mentor .org-badge{border-color:var(--rule); color:var(--muted);}
-.org-badge.org-badge-logo{
-  width:auto;
-  min-width:34px;
-  max-width:110px;
-  padding:4px 8px;
-}
-.org-badge.org-badge-logo img{
-  width:auto;
-  height:100%;
-  max-width:100%;
-  object-fit:contain;
-}
-
 .entry h3{
   font-family:'Fraunces', serif;
   font-weight:500;
   font-size:1.18rem;
-  margin:0;
+  margin:6px 0 4px;
 }
 .entry h3 a{text-decoration:none; border-bottom:1px solid var(--gold-dim);}
 .entry h3 a:hover{color:var(--gold); border-color:var(--gold);}
