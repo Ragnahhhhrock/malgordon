@@ -1,0 +1,267 @@
+/* ==========================================================================
+   myspace-profile.css
+   A self-contained recreation of a classic circa-2005 social profile page.
+   Loaded dynamically only while MySpace Mode is active — see myspace-mode.js
+   ========================================================================== */
+
+#ms-root, #ms-root *{
+  box-sizing:content-box;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+#ms-root{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  overflow-y:auto;
+  background:#e9eff8 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'><rect width='4' height='4' fill='%23e9eff8'/><rect width='2' height='2' fill='%23dfe7f4'/></svg>");
+  color:#000;
+  font-size:12px;
+  line-height:1.4;
+}
+
+#ms-root a{color:#0000cc; text-decoration:underline;}
+#ms-root a:visited{color:#551a8b;}
+#ms-root a:hover{color:#cc0000;}
+
+/* ---- top bar ---- */
+.ms-topbar{
+  background:#002a5c;
+  color:#fff;
+  padding:6px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+  font-size:11px;
+  border-bottom:3px solid #001a3d;
+}
+.ms-logo{
+  font-family:Georgia, 'Times New Roman', serif;
+  font-style:italic;
+  font-weight:bold;
+  font-size:22px;
+  color:#fff;
+  letter-spacing:-0.5px;
+}
+.ms-logo span{color:#7ec8ff;}
+.ms-topnav{display:flex; gap:12px; flex-wrap:wrap;}
+.ms-topnav a{color:#dce8ff !important; text-decoration:none !important; font-weight:bold;}
+.ms-topnav a:hover{color:#fff !important; text-decoration:underline !important;}
+.ms-exit{
+  background:#c00;
+  color:#fff !important;
+  padding:3px 9px;
+  border-radius:2px;
+  font-weight:bold;
+  text-decoration:none !important;
+  border:1px solid #800;
+}
+
+/* ---- page shell ---- */
+.ms-shell{
+  max-width:800px;
+  margin:14px auto 40px;
+  background:#fff;
+  border:1px solid #6699cc;
+}
+
+/* ---- headline ---- */
+.ms-headline{
+  background:#c9dcf7;
+  border-bottom:1px solid #6699cc;
+  padding:8px 12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:6px;
+}
+.ms-headline h1{
+  margin:0;
+  font-size:20px;
+  color:#333;
+  font-family:Arial, sans-serif;
+}
+.ms-headline .ms-viewpics{font-size:11px;}
+
+/* ---- two column layout ---- */
+.ms-body{
+  display:flex;
+  align-items:flex-start;
+  gap:0;
+}
+.ms-left{
+  width:210px;
+  flex:0 0 210px;
+  padding:12px;
+  border-right:1px solid #cdd9ec;
+}
+.ms-right{
+  flex:1 1 auto;
+  min-width:0;
+  padding:12px;
+}
+
+/* ---- modules ---- */
+.ms-module{
+  border:1px solid #6699cc;
+  margin-bottom:12px;
+}
+.ms-module-title{
+  background:#b4ceec;
+  color:#000;
+  font-weight:bold;
+  font-size:11px;
+  padding:4px 7px;
+  border-bottom:1px solid #6699cc;
+}
+.ms-module-body{
+  padding:8px;
+  background:#fff;
+  font-size:11px;
+}
+
+/* ---- profile photo ---- */
+.ms-photo{
+  width:100%;
+  border:1px solid #000;
+  display:block;
+  margin-bottom:10px;
+}
+
+/* ---- contact box ---- */
+.ms-contact-list{list-style:none; margin:0; padding:0;}
+.ms-contact-list li{padding:2px 0; font-size:11px;}
+.ms-contact-list li.disabled{color:#999;}
+
+/* ---- interests ---- */
+.ms-interests dt{font-weight:bold; color:#333; margin-top:6px; font-size:11px;}
+.ms-interests dt:first-child{margin-top:0;}
+.ms-interests dd{margin:0 0 2px; font-size:11px;}
+
+/* ---- hit counter ---- */
+.ms-counter{
+  text-align:center;
+  margin-top:6px;
+  font-size:10px;
+  color:#555;
+}
+.ms-counter .ms-count-digits{
+  display:inline-block;
+  background:#000;
+  color:#0f0;
+  font-family:'Courier New', monospace;
+  padding:2px 6px;
+  letter-spacing:2px;
+  margin-top:2px;
+}
+
+/* ---- general info table ---- */
+.ms-info-table{width:100%; border-collapse:collapse; font-size:11px;}
+.ms-info-table tr:nth-child(odd){background:#f2f6fc;}
+.ms-info-table td{padding:3px 6px; vertical-align:top;}
+.ms-info-table td.ms-info-key{font-weight:bold; color:#333; width:110px;}
+
+/* ---- blurbs ---- */
+.ms-blurb-heading{font-weight:bold; color:#0055aa; font-size:11px; margin:0 0 3px;}
+.ms-blurb-body{margin:0 0 12px; font-size:11px;}
+.ms-blurb-body:last-child{margin-bottom:0;}
+
+/* ---- top 8 friend space ---- */
+.ms-friend-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:8px;
+}
+.ms-friend{
+  text-align:center;
+  font-size:10px;
+}
+.ms-friend img,
+.ms-friend .ms-friend-avatar{
+  width:80px;
+  height:80px;
+  object-fit:cover;
+  border:1px solid #6699cc;
+  display:block;
+  margin:0 auto 3px;
+}
+.ms-friend .ms-friend-avatar{
+  background:#c9dcf7;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  font-weight:bold;
+  color:#336;
+}
+.ms-friend a{text-decoration:none; font-weight:bold;}
+
+/* ---- pics module ---- */
+.ms-pics-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:6px;
+}
+.ms-pics-grid img{
+  width:100%;
+  height:70px;
+  object-fit:cover;
+  border:1px solid #6699cc;
+}
+
+/* ---- comments ---- */
+.ms-comment{
+  display:flex;
+  gap:8px;
+  padding:8px 0;
+  border-bottom:1px dashed #cdd9ec;
+}
+.ms-comment:last-child{border-bottom:none;}
+.ms-comment-avatar{
+  width:50px;
+  height:50px;
+  flex:0 0 auto;
+  background:#c9dcf7;
+  color:#336;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  font-size:16px;
+  border:1px solid #6699cc;
+}
+.ms-comment-body{font-size:11px;}
+.ms-comment-name{font-weight:bold; color:#0055aa;}
+.ms-comment-date{color:#888; font-size:10px; margin-left:4px;}
+
+/* ---- status updates bulletin ---- */
+.ms-status-list{list-style:none; margin:0; padding:0;}
+.ms-status-list li{
+  padding:6px 0;
+  border-bottom:1px dashed #cdd9ec;
+  font-size:11px;
+}
+.ms-status-list li:last-child{border-bottom:none;}
+.ms-status-date{display:block; color:#888; font-size:10px; margin-top:2px;}
+
+/* ---- profile song module ---- */
+.ms-song audio{width:100%; height:26px;}
+.ms-song p{margin:0 0 6px; font-size:11px;}
+
+/* ---- marquee bar ---- */
+.ms-marquee{
+  background:#000;
+  color:#0f0;
+  font-size:11px;
+  padding:4px 0;
+  border-bottom:2px solid #6699cc;
+}
+
+@media (max-width:640px){
+  .ms-body{flex-direction:column;}
+  .ms-left{width:auto; flex:1 1 auto; border-right:none; border-bottom:1px solid #cdd9ec;}
+  .ms-friend-grid{grid-template-columns:repeat(2, 1fr);}
+}
