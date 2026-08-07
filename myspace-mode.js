@@ -5,41 +5,25 @@
 
   var TOP8 = [
     { name: "Tom", photo: "/assets/myspace/tom.jpg", url: null },
-    { name: "WouldPietEat", initials: "WP", url: "https://www.wouldpieteat.com" },
-    { name: "Hornet Bay", initials: "HB", url: "https://www.hornetbay.com" },
-    { name: "PropCheq", initials: "PC", url: "https://www.propcheq.com" },
-    { name: "Startup Weekend", initials: "SW", url: null },
-    { name: "Spacecubed", initials: "SC", url: null },
-    { name: "eGroup WA", initials: "EG", url: null },
-    { name: "Blingvaders", initials: "BV", url: null }
+    { name: "Friend 2", initials: "?", url: null },
+    { name: "Friend 3", initials: "?", url: null },
+    { name: "Friend 4", initials: "?", url: null },
+    { name: "Friend 5", initials: "?", url: null },
+    { name: "Friend 6", initials: "?", url: null },
+    { name: "Friend 7", initials: "?", url: null },
+    { name: "Friend 8", initials: "?", url: null }
   ];
 
   var COMMENTS = [
     {
-      initials: "MB", name: "Miles Burke",
-      text: "mal is such a legend mentoring at Startup Weekend again lol. dude just gives away all his marketing knowledge for free, absolute icon",
-      date: "Nov 29, 2018"
-    },
-    {
-      initials: "CG", name: "Charlie Gunningham",
-      text: "you're literally a fixture of the Perth startup scene at this point mal, always first to like a post or buy a ticket. never change",
-      date: "Nov 27, 2018"
-    },
-    {
-      initials: "NS", name: "Nate Sturcke",
-      text: "the energy you bring to Startup Weekend every single year is unmatched fr. most in demand mentor, no cap",
-      date: "Nov 25, 2018"
+      initials: "??", name: "[someone]",
+      text: "[waiting on a comment to put here]",
+      date: "[date]"
     }
   ];
 
   var STATUS_UPDATES = [
-    "is... starting ANOTHER startup nobody asked for (WouldPietEat, Hornet Bay, PropCheq). story of my life tbh. -__-",
-    "is feeling unstoppable rn. 1,000+ founders mentored and still nobody claps when i walk into a room :'(",
-    "is $10M+ in ad spend deep and still counting down the days till friday. adulthood is a SCAM",
-    "is done pretending Online Marketing (97/100) doesn't run through his veins. this is who i am now. no takebacks.",
-    "is... mentoring startup founders since 2014 and yet NOBODY mentors ME. who's gonna hold ME when i cry",
-    "is thinking about AdShirts again. it flopped. some of us just weren't meant to be understood in our time.",
-    "is remembering when Blingvaders went viral in 3 countries and still feeling alone in this town. numbers don't fix everything guys"
+    "[no status yet — what should this say?]"
   ];
 
   function el(html) {
@@ -139,10 +123,10 @@
       '<div class="ms-module-title">Malcolm Gordon\'s Interests</div>' +
       '<div class="ms-module-body">' +
       '<dl class="ms-interests">' +
-      "<dt>General</dt><dd>Startups, Lean Canvas, PPC campaigns that actually convert</dd>" +
-      "<dt>Music</dt><dd>Whatever's playing at the Startup Weekend afterparty</dd>" +
-      "<dt>Movies</dt><dd>The Social Network (for the laughs)</dd>" +
-      "<dt>Heroes</dt><dd>Anyone who hits 1,000 visitors in hour one</dd>" +
+      "<dt>General</dt><dd>???</dd>" +
+      "<dt>Music</dt><dd>???</dd>" +
+      "<dt>Movies</dt><dd>???</dd>" +
+      "<dt>Heroes</dt><dd>???</dd>" +
       "</dl></div></div>" +
 
       '<div class="ms-counter">Page Views<br><span class="ms-count-digits" id="ms-count-digits">0000000</span></div>' +
@@ -161,20 +145,20 @@
       '<div class="ms-module-title">General Info</div>' +
       '<div class="ms-module-body">' +
       '<table class="ms-info-table"><tbody>' +
-      '<tr><td class="ms-info-key">Status:</td><td>Married to the hustle</td></tr>' +
-      '<tr><td class="ms-info-key">Here for:</td><td>Networking, Startups, Making Friends</td></tr>' +
-      '<tr><td class="ms-info-key">Orientation:</td><td>Bootstrapped</td></tr>' +
-      '<tr><td class="ms-info-key">Hometown:</td><td>Perth, Western Australia</td></tr>' +
-      '<tr><td class="ms-info-key">Occupation:</td><td>Digital Marketing Analyst @ ECU / Startup Mentor</td></tr>' +
-      '<tr><td class="ms-info-key">Member Since:</td><td>1998</td></tr>' +
+      '<tr><td class="ms-info-key">Status:</td><td>???</td></tr>' +
+      '<tr><td class="ms-info-key">Here for:</td><td>???</td></tr>' +
+      '<tr><td class="ms-info-key">Orientation:</td><td>???</td></tr>' +
+      '<tr><td class="ms-info-key">Hometown:</td><td>???</td></tr>' +
+      '<tr><td class="ms-info-key">Occupation:</td><td>???</td></tr>' +
+      '<tr><td class="ms-info-key">Member Since:</td><td>???</td></tr>' +
       "</tbody></table></div></div>" +
 
       '<div class="ms-module">' +
       '<div class="ms-module-body">' +
       '<p class="ms-blurb-heading">About Me</p>' +
-      '<p class="ms-blurb-body">Perth-based growth marketer and startup community builder. Been mentoring founders at Startup Weekend since 2012, running digital marketing for ECU since 2014, and shipping my own ventures on the side since 2005. Currently building WouldPietEat, Hornet Bay, and PropCheq.</p>' +
+      '<p class="ms-blurb-body">[write something here]</p>' +
       '<p class="ms-blurb-heading">Who I\'d Like to Meet</p>' +
-      '<p class="ms-blurb-body">Founders building something real, marketers who test before they guess, and anyone who wants to talk startups over coffee.</p>' +
+      '<p class="ms-blurb-body">[write something here]</p>' +
       "</div></div>" +
 
       '<div class="ms-module">' +
