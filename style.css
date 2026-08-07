@@ -683,6 +683,39 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
   font-size:0.94rem;
   max-width:62ch;
 }
+.entry .entry-breakdown{
+  margin-top:12px;
+  max-width:62ch;
+}
+.entry .breakdown-label{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.7rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin:14px 0 6px;
+}
+.entry .breakdown-label:first-child{margin-top:0;}
+.entry.role .breakdown-label{color:var(--teal);}
+.entry .breakdown-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.entry .breakdown-list li{
+  position:relative;
+  padding:0 0 5px 16px;
+  color:var(--ink-dim);
+  font-size:0.9rem;
+  line-height:1.5;
+}
+.entry .breakdown-list li::before{
+  content:"▸";
+  position:absolute;
+  left:0;
+  color:var(--gold);
+}
+.entry.role .breakdown-list li::before{color:var(--teal);}
 .entry .entry-tags{
   display:flex;
   flex-wrap:wrap;
