@@ -1,7 +1,7 @@
 (function () {
   var STORAGE_KEY = "mg-myspace-mode";
   var STYLESHEET_ID = "myspace-profile-stylesheet";
-  var STYLESHEET_HREF = "/myspace-profile.css";
+  var STYLESHEET_HREF = "/myspace-profile.css?v=2";
 
   var TOP8 = [
     { name: "Tom", photo: "/assets/myspace/tom.jpg", url: null },
