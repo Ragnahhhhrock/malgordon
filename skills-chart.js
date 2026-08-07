@@ -16,23 +16,21 @@
     document.querySelectorAll(".ring-fill").forEach(function (ring) {
       var score = parseFloat(ring.getAttribute("data-score")) || 0;
       var offset = CIRCUMFERENCE * (1 - score / 100);
-      ring.style.transition = "";
-      // force reflow so the transition actually plays
-      ring.getBoundingClientRect();
+      ring.style.transition = "stroke-dashoffset 1.1s cubic-bezier(.22,.8,.28,1)";
       ring.style.strokeDashoffset = offset;
     });
     document.querySelectorAll(".skill-bar-fill").forEach(function (bar) {
       var width = bar.getAttribute("data-width") || "0";
-      bar.style.transition = "";
-      bar.getBoundingClientRect();
+      bar.style.transition = "width 1.1s cubic-bezier(.22,.8,.28,1)";
       bar.style.width = width + "%";
     });
   }
 
   window.animateSkillsChart = function () {
     reset();
-    requestAnimationFrame(function () {
-      requestAnimationFrame(fill);
-    });
+    // force a reflow so the browser registers the reset state before
+    // the transitioned target state is applied
+    void document.body.offsetHeight;
+    setTimeout(fill, 30);
   };
 })();
