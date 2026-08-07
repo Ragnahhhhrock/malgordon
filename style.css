@@ -130,10 +130,15 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 .theme-toggle .icon{font-size:0.85rem;}
 
 /* ============================================================
-   DISCO MODE — strobe + disco ball
+   RAVE PARTY MODE — strobe, disco ball, lasers, scan lights,
+   tiled smiley wallpaper
    ============================================================ */
 body.disco-mode{
-  animation:disco-strobe 1.6s ease-in-out infinite;
+  background-image:url("/assets/rave-smiley.jpg") !important;
+  background-repeat:repeat !important;
+  background-size:70px 70px !important;
+  background-attachment:fixed !important;
+  animation:disco-strobe 1.6s ease-in-out infinite, disco-bg-cycle 4s linear infinite;
 }
 @keyframes disco-strobe{
   0%, 100%{filter:hue-rotate(0deg) brightness(1);}
@@ -141,9 +146,18 @@ body.disco-mode{
   50%{filter:hue-rotate(180deg) brightness(1);}
   75%{filter:hue-rotate(270deg) brightness(1.08);}
 }
+@keyframes disco-bg-cycle{
+  0%{background-color:rgba(255,0,150,0.35);}
+  25%{background-color:rgba(0,200,255,0.35);}
+  50%{background-color:rgba(255,240,0,0.35);}
+  75%{background-color:rgba(140,0,255,0.35);}
+  100%{background-color:rgba(255,0,150,0.35);}
+}
+body.disco-mode{background-blend-mode:multiply;}
 @media (prefers-reduced-motion: reduce){
-  body.disco-mode{animation:none;}
-  .disco-ball, .disco-ball::before, .disco-spot{animation:none !important;}
+  body.disco-mode{animation:none; background-image:none !important;}
+  .disco-ball, .disco-ball::before, .disco-spot,
+  .disco-laser, .disco-scan{animation:none !important; display:none !important;}
 }
 .disco-ball{
   position:fixed;
@@ -189,6 +203,56 @@ body.disco-mode{
 @keyframes disco-spot-move{
   0%, 100%{opacity:0.6;}
   50%{opacity:1;}
+}
+
+/* laser beams sweeping from top corners */
+.disco-lasers{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:220;
+  overflow:hidden;
+}
+.disco-laser{
+  position:absolute;
+  top:-10%;
+  left:50%;
+  width:6px;
+  height:140%;
+  background:linear-gradient(to bottom, var(--laser-color) 0%, transparent 75%);
+  opacity:0.55;
+  mix-blend-mode:screen;
+  transform-origin:top center;
+}
+.disco-laser-1{left:5%;  animation:laser-sweep-a 2.2s ease-in-out infinite;}
+.disco-laser-2{left:25%; animation:laser-sweep-b 1.8s ease-in-out infinite;}
+.disco-laser-3{left:50%; animation:laser-sweep-a 2.6s ease-in-out infinite reverse;}
+.disco-laser-4{left:75%; animation:laser-sweep-b 2s ease-in-out infinite reverse;}
+.disco-laser-5{left:95%; animation:laser-sweep-a 1.6s ease-in-out infinite;}
+@keyframes laser-sweep-a{
+  0%, 100%{transform:rotate(-35deg);}
+  50%{transform:rotate(35deg);}
+}
+@keyframes laser-sweep-b{
+  0%, 100%{transform:rotate(-20deg);}
+  50%{transform:rotate(50deg);}
+}
+
+/* horizontal scan-light sweep */
+.disco-scan{
+  position:fixed;
+  left:0;
+  right:0;
+  height:120px;
+  top:-120px;
+  pointer-events:none;
+  z-index:180;
+  background:linear-gradient(to bottom, transparent, rgba(255,255,255,0.35), transparent);
+  animation:disco-scan-move 3.2s linear infinite;
+}
+@keyframes disco-scan-move{
+  0%{top:-120px;}
+  100%{top:100%;}
 }
 
 .mode-toggle{
