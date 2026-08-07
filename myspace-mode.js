@@ -5,8 +5,8 @@
 
   var TOP8 = [
     { name: "Tom", photo: "/assets/myspace/tom.jpg", url: null },
-    { name: "xX_D3str0yaXx", photo: "/assets/myspace/friends/f2.png", url: null },
-    { name: "Br1ttz_xo", photo: "/assets/myspace/friends/f3.png", url: null },
+    { name: "Jack", photo: "/assets/myspace/friends/jack.jpg", url: null },
+    { name: "Jurgen", photo: "/assets/myspace/friends/jurgen.jpg", url: null },
     { name: "T0xicKitten*", photo: "/assets/myspace/friends/f4.png", url: null },
     { name: "MC_Fr3sh2005", photo: "/assets/myspace/friends/f5.png", url: null },
     { name: "$t4rBoy_87", photo: "/assets/myspace/friends/f6.png", url: null },
