@@ -129,6 +129,290 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 .theme-toggle:hover{border-color:var(--gold); color:var(--gold);}
 .theme-toggle .icon{font-size:0.85rem;}
 
+/* ============================================================
+   MYSPACE MODE — a loving, chaotic homage to circa-2006 profile pages
+   ============================================================ */
+body.myspace-mode{
+  font-family:'Comic Sans MS', 'Comic Sans', cursive, sans-serif !important;
+  background:
+    repeating-linear-gradient(45deg, #1a0033 0px, #1a0033 40px, #2d004d 40px, #2d004d 80px);
+  background-attachment:fixed;
+}
+body.myspace-mode *{
+  font-family:'Comic Sans MS', 'Comic Sans', cursive, sans-serif !important;
+}
+body.myspace-mode .wrap{
+  background:rgba(0,0,10,0.72);
+}
+body.myspace-mode h1,
+body.myspace-mode h2,
+body.myspace-mode .brand{
+  background:linear-gradient(90deg,#ff004c,#ff9900,#fff700,#33ff66,#00c9ff,#cc33ff,#ff004c);
+  background-size:400% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:myspace-rainbow 4s linear infinite;
+  text-shadow:none !important;
+}
+@keyframes myspace-rainbow{
+  0%{background-position:0% 50%;}
+  100%{background-position:400% 50%;}
+}
+body.myspace-mode a:not(.mode-toggle):not(.theme-toggle):not(.tab-btn):not(.filter-btn){
+  color:#4de2ff !important;
+  text-decoration:underline !important;
+}
+body.myspace-mode a:hover{color:#ff4de2 !important;}
+body.myspace-mode .eyebrow,
+body.myspace-mode .stat-eyebrow,
+body.myspace-mode .skill-demo{
+  animation:myspace-blink 1s step-start infinite;
+}
+@keyframes myspace-blink{
+  50%{opacity:0.25;}
+}
+body.myspace-mode .card,
+body.myspace-mode .stat-block,
+body.myspace-mode .skill-card,
+body.myspace-mode .skill-row,
+body.myspace-mode .rec-card,
+body.myspace-mode .ring-card,
+body.myspace-mode .entry{
+  border:3px dashed #ff33cc !important;
+  background:rgba(20,0,40,0.85) !important;
+  box-shadow:3px 3px 0 #00e5ff, -3px -3px 0 #ffee00;
+}
+body.myspace-mode .tag,
+body.myspace-mode .entry-tag,
+body.myspace-mode .filter-btn,
+body.myspace-mode .tab-btn{
+  border:2px solid #ffee00 !important;
+  background:rgba(255,0,204,0.25) !important;
+  color:#fff !important;
+}
+body.myspace-mode header.site-head{
+  background:#0a0018;
+  border-bottom:4px double #ff33cc;
+}
+
+/* injected chrome */
+.myspace-marquee{
+  background:#000;
+  color:#0f0;
+  font-family:'Comic Sans MS', cursive !important;
+  font-size:0.95rem;
+  padding:6px 0;
+  border-bottom:3px solid #ff33cc;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.myspace-marquee marquee{display:block;}
+.myspace-counter{
+  position:fixed;
+  bottom:16px;
+  left:16px;
+  z-index:200;
+  background:#000;
+  border:2px outset #999;
+  padding:6px 10px;
+  font-family:'Courier New', monospace !important;
+  color:#0f0;
+  font-size:0.8rem;
+  text-align:center;
+}
+.myspace-counter .count-digits{
+  display:block;
+  font-size:1.3rem;
+  letter-spacing:3px;
+  background:#111;
+  padding:2px 6px;
+  margin-top:3px;
+  border:1px solid #333;
+}
+.myspace-topfriends{
+  position:fixed;
+  top:110px;
+  right:16px;
+  z-index:200;
+  width:190px;
+  background:#fff0fa;
+  border:3px ridge #ff33cc;
+  padding:10px;
+  font-family:'Comic Sans MS', cursive !important;
+  color:#3a0050;
+  box-shadow:4px 4px 0 rgba(0,0,0,0.4);
+}
+.myspace-topfriends h4{
+  margin:0 0 8px;
+  font-size:0.85rem;
+  text-align:center;
+  color:#c800a0;
+}
+.myspace-topfriends ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:6px;
+}
+.myspace-topfriends li{
+  background:#fff;
+  border:1px solid #ffb3ec;
+  font-size:0.68rem;
+  text-align:center;
+  padding:5px 2px;
+}
+.myspace-topfriends li a{color:#c800a0 !important; text-decoration:none !important; font-weight:bold;}
+
+.myspace-player{
+  position:fixed;
+  bottom:16px;
+  right:16px;
+  z-index:200;
+  width:230px;
+  background:#000;
+  border:2px outset #666;
+  padding:10px;
+  color:#0f0;
+  font-family:'Courier New', monospace !important;
+  box-shadow:4px 4px 0 rgba(0,0,0,0.5);
+}
+.myspace-player .now-playing{
+  font-size:0.7rem;
+  color:#0f0;
+  white-space:nowrap;
+  overflow:hidden;
+  margin-bottom:6px;
+}
+.myspace-player .now-playing marquee{display:block;}
+.myspace-player .viz{
+  display:flex;
+  align-items:flex-end;
+  gap:2px;
+  height:22px;
+  margin-bottom:6px;
+}
+.myspace-player .viz span{
+  flex:1;
+  background:#0f0;
+  animation:myspace-viz 0.8s ease-in-out infinite;
+}
+.myspace-player .viz span:nth-child(1){animation-delay:0s;}
+.myspace-player .viz span:nth-child(2){animation-delay:0.15s;}
+.myspace-player .viz span:nth-child(3){animation-delay:0.3s;}
+.myspace-player .viz span:nth-child(4){animation-delay:0.1s;}
+.myspace-player .viz span:nth-child(5){animation-delay:0.25s;}
+@keyframes myspace-viz{
+  0%,100%{height:4px;}
+  50%{height:22px;}
+}
+.myspace-player audio{width:100%; height:28px;}
+.myspace-player .track-missing{
+  font-size:0.65rem;
+  color:#ff9900;
+  line-height:1.4;
+}
+
+@media (max-width:720px){
+  .myspace-topfriends{display:none;}
+  .myspace-player{width:180px;}
+}
+
+/* ============================================================
+   DISCO MODE — strobe + disco ball
+   ============================================================ */
+body.disco-mode{
+  animation:disco-strobe 1.6s ease-in-out infinite;
+}
+@keyframes disco-strobe{
+  0%, 100%{filter:hue-rotate(0deg) brightness(1);}
+  25%{filter:hue-rotate(90deg) brightness(1.08);}
+  50%{filter:hue-rotate(180deg) brightness(1);}
+  75%{filter:hue-rotate(270deg) brightness(1.08);}
+}
+@media (prefers-reduced-motion: reduce){
+  body.disco-mode{animation:none;}
+  .disco-ball, .disco-ball::before, .disco-spot{animation:none !important;}
+}
+.disco-ball{
+  position:fixed;
+  top:70px;
+  left:50%;
+  transform:translateX(-50%);
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 30% 30%, #fff 0%, #ccc 8%, #888 30%, #444 60%, #222 100%);
+  background-size:8px 8px, cover;
+  box-shadow:0 0 30px 6px rgba(255,255,255,0.6);
+  z-index:300;
+  animation:disco-ball-spin 3s linear infinite;
+  pointer-events:none;
+}
+.disco-ball::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background-image:
+    repeating-conic-gradient(rgba(255,255,255,0.35) 0deg 4deg, rgba(0,0,0,0.15) 4deg 8deg);
+  mix-blend-mode:overlay;
+  animation:disco-ball-spin 1.5s linear infinite reverse;
+}
+@keyframes disco-ball-spin{
+  from{transform:translateX(-50%) rotate(0deg);}
+  to{transform:translateX(-50%) rotate(360deg);}
+}
+.disco-spot{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:150;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255,0,150,0.18), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(0,200,255,0.18), transparent 35%),
+    radial-gradient(circle at 50% 0%, rgba(255,240,0,0.15), transparent 40%);
+  animation:disco-spot-move 2.4s ease-in-out infinite;
+}
+@keyframes disco-spot-move{
+  0%, 100%{opacity:0.6;}
+  50%{opacity:1;}
+}
+
+.mode-toggle{
+  margin-left:10px;
+  background:none;
+  border:1px solid var(--rule);
+  color:var(--ink-dim);
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.04em;
+  padding:6px 11px;
+  border-radius:20px;
+  cursor:pointer;
+  transition:border-color .15s, color .15s, background .15s;
+}
+.mode-toggle:hover{border-color:var(--gold); color:var(--gold);}
+.mode-toggle[aria-pressed="true"]{
+  background:var(--gold);
+  color:var(--bg);
+  border-color:var(--gold);
+}
+#disco-toggle[aria-pressed="true"]{
+  background:linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5,#ff3cac);
+  background-size:300% 100%;
+  color:#fff;
+  border-color:transparent;
+  animation:disco-btn-cycle 2.5s linear infinite;
+}
+@keyframes disco-btn-cycle{
+  0%{background-position:0% 50%;}
+  100%{background-position:300% 50%;}
+}
+
 /* -------- hero -------- */
 .hero{
   padding:72px 0 56px;
