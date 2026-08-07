@@ -569,6 +569,34 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 .entry.role .tick-dot{border-color:var(--teal); background:var(--teal);}
 .entry.mentor .tick-dot{border-color:var(--muted); background:var(--bg);}
 
+/* -------- scroll-reveal: ledger entries + recommendation cards -------- */
+.entry, .rec-card{
+  opacity:0;
+  transform:translateY(16px);
+  transition:opacity .5s ease, transform .5s ease;
+}
+.entry.in-view, .rec-card.in-view{
+  opacity:1;
+  transform:translateY(0);
+}
+.entry .tick-dot{
+  transform:scale(0);
+  transition:transform .35s cubic-bezier(.34,1.6,.64,1);
+}
+.entry.in-view .tick-dot{
+  transform:scale(1);
+  transition-delay:.15s;
+}
+@media (prefers-reduced-motion: reduce){
+  .entry, .rec-card, .entry .tick-dot{opacity:1; transform:none; transition:none;}
+}
+
+/* -------- tab crossfade -------- */
+.tab-panel{
+  transition:opacity .25s ease;
+}
+.tab-panel.tab-fading{opacity:0;}
+
 .entry .row1{
   display:flex;
   align-items:baseline;
