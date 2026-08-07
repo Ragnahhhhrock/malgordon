@@ -252,10 +252,26 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
   display:flex;
   flex-direction:column;
   gap:10px;
-  transition:border-color .15s, background .15s, transform .15s;
+  opacity:0;
+  transform:translateY(22px) scale(0.97);
+  transition:border-color .15s, background .15s,
+             transform .5s cubic-bezier(.22,.8,.28,1), opacity .5s cubic-bezier(.22,.8,.28,1);
+}
+.stat-block.in-view{
+  opacity:1;
+  transform:translateY(0) scale(1);
 }
 .stat-block:hover{border-color:var(--gold-dim); background:var(--card-hi); transform:translateY(-2px);}
 .stat-block.teal:hover{border-color:var(--teal-dim);}
+.stat-block .stat-number{
+  transition:color .3s ease;
+}
+.stat-block.count-active .stat-number{color:var(--gold);}
+.stat-block.count-active.teal .stat-number{color:var(--teal);}
+
+@media (prefers-reduced-motion: reduce){
+  .stat-block{opacity:1; transform:none; transition:none;}
+}
 
 .stat-block .icon-badge{
   width:36px;
