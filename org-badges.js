@@ -36,7 +36,8 @@
   };
 
   var LOGO_MAP = {
-    "Buildcloud": "/assets/logos/buildcloud.png"
+    "Buildcloud": "/assets/logos/buildcloud.png",
+    "Blingvaders": "/assets/logos/blingvaders.jpg"
   };
 
   var STOP_WORDS = ["the", "of", "and", "for", "at", "in", "on", "a", "an"];

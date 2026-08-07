@@ -652,11 +652,15 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 .entry.role .org-badge{border-color:var(--teal-dim); color:var(--teal);}
 .entry.mentor .org-badge{border-color:var(--rule); color:var(--muted);}
 .org-badge.org-badge-logo{
-  padding:4px;
+  width:auto;
+  min-width:34px;
+  max-width:110px;
+  padding:4px 8px;
 }
 .org-badge.org-badge-logo img{
-  width:100%;
+  width:auto;
   height:100%;
+  max-width:100%;
   object-fit:contain;
 }
 
