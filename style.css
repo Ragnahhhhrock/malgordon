@@ -692,7 +692,37 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 .entry .entry-breakdown{
   margin-top:12px;
   max-width:62ch;
+  overflow:hidden;
+  max-height:0;
+  opacity:0;
+  transition:max-height .35s ease, opacity .25s ease, margin-top .35s ease;
 }
+.entry .entry-breakdown.expanded{
+  opacity:1;
+  margin-top:12px;
+}
+.entry-details-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  margin-top:8px;
+  background:none;
+  border:none;
+  padding:0;
+  cursor:pointer;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem;
+  letter-spacing:0.03em;
+  color:var(--gold);
+}
+.entry.role .entry-details-toggle{color:var(--teal);}
+.entry-details-toggle:hover{opacity:0.8;}
+.entry-details-toggle .chevron{
+  display:inline-block;
+  transition:transform .25s ease;
+  font-size:0.7rem;
+}
+.entry-details-toggle[aria-expanded="true"] .chevron{transform:rotate(180deg);}
 .entry .breakdown-label{
   font-family:'IBM Plex Mono', monospace;
   font-size:0.7rem;
