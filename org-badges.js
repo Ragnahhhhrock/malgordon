@@ -40,7 +40,8 @@
     "Buildcloud": "/assets/logos/buildcloud.png",
     "Blingvaders": "/assets/logos/blingvaders.jpg",
     "Aluminium West": "/assets/logos/aluminiumwest.png",
-    "Threadster": "/assets/logos/threadster.png"
+    "Threadster": "/assets/logos/threadster.png",
+    "Amman Pasha Hotel": "/assets/logos/ammanpashahotel.jpg"
   };
 
   var STOP_WORDS = ["the", "of", "and", "for", "at", "in", "on", "a", "an"];
