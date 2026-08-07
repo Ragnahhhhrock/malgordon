@@ -15,6 +15,9 @@
       panels.forEach(function (panel) {
         panel.hidden = panel.id !== target;
       });
+      if (target === "tab-skills" && typeof window.animateSkillsChart === "function") {
+        window.animateSkillsChart();
+      }
       if (typeof gtag === "function") {
         gtag("event", "ledger_tab_view", { tab: target });
       }
