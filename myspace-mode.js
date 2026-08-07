@@ -5,25 +5,45 @@
 
   var TOP8 = [
     { name: "Tom", photo: "/assets/myspace/tom.jpg", url: null },
-    { name: "Friend 2", initials: "?", url: null },
-    { name: "Friend 3", initials: "?", url: null },
-    { name: "Friend 4", initials: "?", url: null },
-    { name: "Friend 5", initials: "?", url: null },
-    { name: "Friend 6", initials: "?", url: null },
-    { name: "Friend 7", initials: "?", url: null },
-    { name: "Friend 8", initials: "?", url: null }
+    { name: "xX_D3str0yaXx", photo: "/assets/myspace/friends/f2.png", url: null },
+    { name: "Br1ttz_xo", photo: "/assets/myspace/friends/f3.png", url: null },
+    { name: "T0xicKitten*", photo: "/assets/myspace/friends/f4.png", url: null },
+    { name: "MC_Fr3sh2005", photo: "/assets/myspace/friends/f5.png", url: null },
+    { name: "$t4rBoy_87", photo: "/assets/myspace/friends/f6.png", url: null },
+    { name: "Ch4osQu33n_x", photo: "/assets/myspace/friends/f7.png", url: null },
+    { name: "L1lRebel_Xx", photo: "/assets/myspace/friends/f8.png", url: null }
   ];
 
   var COMMENTS = [
     {
-      initials: "??", name: "[someone]",
-      text: "[waiting on a comment to put here]",
-      date: "[date]"
+      initials: "TS", name: "$t4rBoy_87",
+      text: "bro just KEEPS launching startups and somehow they keep working out?? teach me your ways man fr",
+      date: "Mar 14, 2005"
+    },
+    {
+      initials: "BX", name: "Br1ttz_xo",
+      text: "ppl said blingvaders was a crazy idea and look who's laughing now!! so proud of you keep going!! xoxo",
+      date: "Mar 12, 2005"
+    },
+    {
+      initials: "CQ", name: "Ch4osQu33n_x",
+      text: "not everyone gets the whole 'quit your job and just build stuff' thing but i do. you're gonna make it big i can feel it",
+      date: "Mar 9, 2005"
+    },
+    {
+      initials: "MC", name: "MC_Fr3sh2005",
+      text: "the chain is SICK btw. entrepreneur AND drip?? unreal combo ngl 8-)",
+      date: "Mar 8, 2005"
     }
   ];
 
   var STATUS_UPDATES = [
-    "[no status yet — what should this say?]"
+    "just launched Blingvaders!!! retro gaming jewellery, straight from my brain to your neck. LET'S GOOO",
+    "got the space invader iced out neck chain in today and i am NEVER taking it off. this is who i am now",
+    "is trying to explain to his mum what a 'startup' is for the fifth time this week. she still thinks i sell phones",
+    "spent the whole night sketching new Blingvaders designs instead of sleeping. no regrets. this is the DREAM",
+    "is... single, here for friendship, and extremely busy building things nobody asked for. balance!!",
+    "just realised the chain jingles when i walk and honestly? i've never felt more powerful"
   ];
 
   function el(html) {
@@ -123,10 +143,10 @@
       '<div class="ms-module-title">Malcolm Gordon\'s Interests</div>' +
       '<div class="ms-module-body">' +
       '<dl class="ms-interests">' +
-      "<dt>General</dt><dd>???</dd>" +
-      "<dt>Music</dt><dd>???</dd>" +
-      "<dt>Movies</dt><dd>???</dd>" +
-      "<dt>Heroes</dt><dd>???</dd>" +
+      "<dt>General</dt><dd>Startups, mischief, and my space invader iced out chain</dd>" +
+      "<dt>Music</dt><dd>Radiohead, Armand Van Helden, DJ Rousa</dd>" +
+      "<dt>Movies</dt><dd>Lord of the Rings, Star Wars</dd>" +
+      "<dt>Heroes</dt><dd>Steve Jobs, Richard Branson, Barack Obama, Ben Cousins (Go Eagles!)</dd>" +
       "</dl></div></div>" +
 
       '<div class="ms-counter">Page Views<br><span class="ms-count-digits" id="ms-count-digits">0000000</span></div>' +
@@ -145,20 +165,20 @@
       '<div class="ms-module-title">General Info</div>' +
       '<div class="ms-module-body">' +
       '<table class="ms-info-table"><tbody>' +
-      '<tr><td class="ms-info-key">Status:</td><td>???</td></tr>' +
-      '<tr><td class="ms-info-key">Here for:</td><td>???</td></tr>' +
-      '<tr><td class="ms-info-key">Orientation:</td><td>???</td></tr>' +
-      '<tr><td class="ms-info-key">Hometown:</td><td>???</td></tr>' +
-      '<tr><td class="ms-info-key">Occupation:</td><td>???</td></tr>' +
-      '<tr><td class="ms-info-key">Member Since:</td><td>???</td></tr>' +
+      '<tr><td class="ms-info-key">Status:</td><td>Single</td></tr>' +
+      '<tr><td class="ms-info-key">Here for:</td><td>Friendship</td></tr>' +
+      '<tr><td class="ms-info-key">Orientation:</td><td>Straight</td></tr>' +
+      '<tr><td class="ms-info-key">Hometown:</td><td>Perth, Western Australia</td></tr>' +
+      '<tr><td class="ms-info-key">Occupation:</td><td>Mischief maker, marketer, entrepreneur</td></tr>' +
+      '<tr><td class="ms-info-key">Member Since:</td><td>March 2005</td></tr>' +
       "</tbody></table></div></div>" +
 
       '<div class="ms-module">' +
       '<div class="ms-module-body">' +
       '<p class="ms-blurb-heading">About Me</p>' +
-      '<p class="ms-blurb-body">[write something here]</p>' +
+      '<p class="ms-blurb-body">Here for a good time, not a long time.</p>' +
       '<p class="ms-blurb-heading">Who I\'d Like to Meet</p>' +
-      '<p class="ms-blurb-body">[write something here]</p>' +
+      '<p class="ms-blurb-body">Steve Jobs and Steve Coogan. The two Steves.</p>' +
       "</div></div>" +
 
       '<div class="ms-module">' +
