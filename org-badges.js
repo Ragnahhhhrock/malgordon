@@ -20,7 +20,7 @@
     "Asgard Wealth Solutions": "AWS",
     "Charttv": "CT",
     "Elliottician": "EL",
-    "ASX Perpetual (now MUFG Corporate Markets)": "ASX",
+    "ASX Perpetual Registrars (now MUFG Corporate Markets)": "ASX",
     "Messages On Hold": "MOH",
     "eGroup WA": "EG",
     "Somersoft & PropertyChat": "S&P",
