@@ -317,6 +317,66 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 }
 .tab-panel[hidden]{display:none;}
 
+/* -------- skills grid -------- */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  gap:18px;
+}
+.skill-card{
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:var(--radius);
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.skill-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+}
+.skill-head h3{
+  font-family:'Fraunces', serif;
+  font-weight:500;
+  font-size:1.05rem;
+  margin:0;
+}
+.skill-score{
+  font-family:'IBM Plex Mono', monospace;
+  font-weight:500;
+  font-size:1.15rem;
+  color:var(--gold);
+  white-space:nowrap;
+}
+.skill-score-max{
+  font-size:0.75rem;
+  color:var(--muted);
+  font-weight:400;
+}
+.skill-bar{
+  height:5px;
+  background:var(--bg-alt);
+  border-radius:3px;
+  overflow:hidden;
+}
+.skill-bar-fill{
+  height:100%;
+  background:var(--gold);
+  border-radius:3px;
+}
+.skill-demo{
+  margin:4px 0 0;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.skill-card .entry-tags{margin-top:0;}
+
 /* -------- recommendation cards -------- */
 .rec-grid{
   display:grid;
