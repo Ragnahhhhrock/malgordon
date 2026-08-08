@@ -129,6 +129,118 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 .theme-toggle:hover{border-color:var(--gold); color:var(--gold);}
 .theme-toggle .icon{font-size:0.85rem;}
 
+/* ============================================================
+   CAT DISCO MODE — bouncing cats, lasers, strobe, profile song
+   ============================================================ */
+body.cat-disco-mode{
+  animation:catdisco-strobe 1.6s ease-in-out infinite;
+}
+@keyframes catdisco-strobe{
+  0%, 100%{filter:hue-rotate(0deg) brightness(1);}
+  25%{filter:hue-rotate(90deg) brightness(1.08);}
+  50%{filter:hue-rotate(180deg) brightness(1);}
+  75%{filter:hue-rotate(270deg) brightness(1.08);}
+}
+@media (prefers-reduced-motion: reduce){
+  body.cat-disco-mode{animation:none;}
+  .catdisco-laser, .catdisco-scan, .cat-sprite{animation:none !important;}
+}
+
+/* bouncing cat sprites */
+.cat-sprite{
+  position:fixed;
+  font-size:2.6rem;
+  line-height:1;
+  z-index:400;
+  pointer-events:none;
+  user-select:none;
+  filter:drop-shadow(0 0 6px rgba(255,255,255,0.5));
+  will-change:transform;
+}
+
+/* laser beams */
+.catdisco-lasers{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:220;
+  overflow:hidden;
+}
+.catdisco-laser{
+  position:absolute;
+  top:-10%;
+  width:6px;
+  height:140%;
+  background:linear-gradient(to bottom, var(--laser-color) 0%, transparent 75%);
+  opacity:0.55;
+  mix-blend-mode:screen;
+  transform-origin:top center;
+}
+.catdisco-laser-1{left:5%;  animation:catdisco-sweep-a 2.2s ease-in-out infinite;}
+.catdisco-laser-2{left:25%; animation:catdisco-sweep-b 1.8s ease-in-out infinite;}
+.catdisco-laser-3{left:50%; animation:catdisco-sweep-a 2.6s ease-in-out infinite reverse;}
+.catdisco-laser-4{left:75%; animation:catdisco-sweep-b 2s ease-in-out infinite reverse;}
+.catdisco-laser-5{left:95%; animation:catdisco-sweep-a 1.6s ease-in-out infinite;}
+@keyframes catdisco-sweep-a{
+  0%, 100%{transform:rotate(-35deg);}
+  50%{transform:rotate(35deg);}
+}
+@keyframes catdisco-sweep-b{
+  0%, 100%{transform:rotate(-20deg);}
+  50%{transform:rotate(50deg);}
+}
+
+/* scan light sweep */
+.catdisco-scan{
+  position:fixed;
+  left:0;
+  right:0;
+  height:120px;
+  top:-120px;
+  pointer-events:none;
+  z-index:180;
+  background:linear-gradient(to bottom, transparent, rgba(255,255,255,0.35), transparent);
+  animation:catdisco-scan-move 3.2s linear infinite;
+}
+@keyframes catdisco-scan-move{
+  0%{top:-120px;}
+  100%{top:100%;}
+}
+
+/* media player, dismissable */
+.catdisco-player{
+  position:fixed;
+  bottom:16px;
+  right:16px;
+  z-index:500;
+  width:240px;
+  background:#000;
+  border:2px outset #666;
+  padding:10px;
+  color:#0f0;
+  font-family:'Courier New', monospace;
+  box-shadow:4px 4px 0 rgba(0,0,0,0.5);
+}
+.catdisco-player .now-playing{
+  font-size:0.72rem;
+  margin-bottom:6px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+}
+.catdisco-player .close-player{
+  background:none;
+  border:1px solid #0f0;
+  color:#0f0;
+  cursor:pointer;
+  font-family:'Courier New', monospace;
+  font-size:0.7rem;
+  padding:1px 6px;
+  line-height:1.4;
+}
+.catdisco-player audio{width:100%; height:28px;}
+
 .mode-toggle{
   margin-left:10px;
   background:none;
@@ -149,6 +261,17 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
   background:var(--gold);
   color:var(--bg);
   border-color:var(--gold);
+}
+#catdisco-toggle[aria-pressed="true"]{
+  background:linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5,#ff3cac);
+  background-size:300% 100%;
+  color:#fff;
+  border-color:transparent;
+  animation:catdisco-btn-cycle 2.5s linear infinite;
+}
+@keyframes catdisco-btn-cycle{
+  0%{background-position:0% 50%;}
+  100%{background-position:300% 50%;}
 }
 
 /* -------- hero -------- */
