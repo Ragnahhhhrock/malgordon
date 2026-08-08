@@ -806,6 +806,8 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 }
 .tag.skill{border-color:var(--teal-dim); color:var(--teal);}
 .tag.outcome-tag{border-color:var(--gold-dim); color:var(--gold);}
+a.tag{text-decoration:none; transition:border-color .15s, background .15s;}
+a.tag:hover{border-color:var(--teal); background:var(--card-hi);}
 
 /* -------- project detail page -------- */
 .project-hero{
