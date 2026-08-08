@@ -10,7 +10,6 @@
     "Startup Weekend Perth": "SW",
     "Techstars Startup Weekend": "SW",
     "Threadster": "TH",
-    "Buildcloud": "BC",
     "Digital Marketing Agency": "DMA",
     "Blingvaders": "BV",
     "Aluminium West": "AW",
@@ -35,7 +34,6 @@
   };
 
   var LOGO_MAP = {
-    "Buildcloud": "/assets/logos/buildcloud.png",
     "Blingvaders": "/assets/logos/blingvaders.jpg",
     "Aluminium West": "/assets/logos/aluminiumwest.png",
     "Threadster": "/assets/logos/threadster.png",
