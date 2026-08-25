@@ -123,11 +123,13 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
   cursor:pointer;
   display:inline-flex;
   align-items:center;
+  justify-content:center;
   gap:6px;
   transition:border-color .15s, color .15s;
 }
 .theme-toggle:hover{border-color:var(--gold); color:var(--gold);}
-.theme-toggle .icon{font-size:0.85rem;}
+.theme-toggle .icon{font-size:0.85rem; display:inline-block; width:0.9em; text-align:center;}
+.theme-toggle .label{display:inline-block; width:40px; text-align:left;}
 
 .mode-toggle{
   margin-left:10px;
