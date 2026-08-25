@@ -3,7 +3,7 @@
     "WouldPietEat": "WP",
     "Hornet Bay": "HB",
     "PropCheq": "PC",
-    "WouldPietEat · Hornet Bay · PropCheq": "MG",
+    "WouldPietEat · Hornet Bay · PropCheq · Offsetcheck": "MG",
     "Spacecubed": "SC",
     "Plus Eight Accelerator Program": "P8",
     "Edith Cowan University (ECU)": "ECU",
