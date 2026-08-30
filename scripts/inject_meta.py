@@ -9,7 +9,7 @@ KEYWORDS_HOME = ("Malcolm Gordon, startup mentor Perth, growth marketer, digital
 PROJECT_KEYWORDS = {
     "wouldpieteat": "WouldPietEat, AI food judge, computer vision app, whole foods diet app",
     "hornetbay": "Hornet Bay, F/A-18 flight simulator, browser carrier ops game, dogfight game",
-    "propcheq": "PropCheq, Malcolm Gordon project",
+    "propcheq": "Propcheq, property inspection app, inspection report software, proptech Australia",
     "offsetcheck": "Offsetcheck, mortgage offset audit, bank interest checker, Australian homeowners",
     "charttv": "Charttv, technical analysis vlog, finance YouTube channel",
     "sleepcap": "Sleep-cap.com, Joomla e-commerce, early e-commerce build",
