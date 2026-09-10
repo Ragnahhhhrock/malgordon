@@ -747,6 +747,21 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
   color:var(--gold);
 }
 .card .status.dormant{color:var(--muted);}
+.card .card-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+}
+.card .card-tags .cat-tag{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.66rem;
+  letter-spacing:0.02em;
+  padding:2px 8px;
+  border-radius:10px;
+  border:1px solid var(--teal-dim);
+  color:var(--teal);
+  background:var(--bg-alt);
+}
 .card h3{
   font-family:'Fraunces', serif;
   font-weight:500;
