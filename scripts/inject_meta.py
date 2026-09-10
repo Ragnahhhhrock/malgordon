@@ -11,6 +11,7 @@ PROJECT_KEYWORDS = {
     "hornetbay": "Hornet Bay, F/A-18 flight simulator, browser carrier ops game, dogfight game",
     "propcheq": "Propcheq, property inspection app, inspection report software, proptech Australia",
     "offsetcheck": "Offsetcheck, mortgage offset audit, bank interest checker, Australian homeowners",
+    "outbackrun": "Outback Run, Nullarbor, arcade racing game, browser game, Out Run style",
     "charttv": "Charttv, technical analysis vlog, finance YouTube channel",
     "sleepcap": "Sleep-cap.com, Joomla e-commerce, early e-commerce build",
     "blingvaders": "Blingvaders, retro jewellery brand, viral product launch",
