@@ -750,18 +750,19 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
 .card .card-tags{
   display:flex;
   flex-wrap:wrap;
-  gap:5px;
+  gap:6px;
 }
 .card .card-tags .cat-tag{
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.66rem;
-  letter-spacing:0.02em;
-  padding:2px 8px;
-  border-radius:10px;
-  border:1px solid var(--teal-dim);
-  color:var(--teal);
-  background:var(--bg-alt);
+  font-size:0.7rem;
+  letter-spacing:0.03em;
+  color:var(--ink-dim);
+  background:var(--card);
+  border:1px solid var(--rule);
+  padding:5px 12px;
+  border-radius:20px;
 }
+.card:hover .card-tags .cat-tag{border-color:var(--gold-dim); color:var(--ink);}
 .card h3{
   font-family:'Fraunces', serif;
   font-weight:500;
