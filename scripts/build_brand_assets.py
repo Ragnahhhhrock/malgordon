@@ -222,7 +222,7 @@ bd.text((text_x, safe_y0 + 200), "Startups · Growth marketing · Perth's founde
 url_f = ImageFont.truetype(MONO_BOLD, 30)
 bd.text((text_x, safe_y0 + 260), "malgordon.com", font=url_f, fill=GOLD)
 handle_f = ImageFont.truetype(MONO, 26)
-bd.text((text_x, safe_y0 + 305), "@MalcolmGordonliveshere", font=handle_f, fill=MUTED)
+bd.text((text_x, safe_y0 + 305), "@Malgordonliveshere", font=handle_f, fill=MUTED)
 
 banner.save("assets/youtube/banner.png", "PNG", optimize=True)
 print("wrote assets/youtube/banner.png", banner.size)
