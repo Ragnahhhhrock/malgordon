@@ -13,6 +13,7 @@ PROJECT_KEYWORDS = {
     "offsetcheck": "Offsetcheck, mortgage offset audit, bank interest checker, Australian homeowners",
     "outbackrun": "Outback Run, Nullarbor, arcade racing game, browser game, Out Run style",
     "brickifymyhome": "Brickify My Home, custom brick model, LEGO compatible, house model kit, 3D house preview",
+    "tinselpatrol": "Tinsel Patrol, Christmas tree defence game, tower defence, browser game, cat game",
     "charttv": "Charttv, technical analysis vlog, finance YouTube channel",
     "sleepcap": "Sleep-cap.com, Joomla e-commerce, early e-commerce build",
     "blingvaders": "Blingvaders, retro jewellery brand, viral product launch",
