@@ -15,6 +15,7 @@ PROJECT_KEYWORDS = {
     "brickifymyhome": "Brickify My Home, custom brick model, LEGO compatible, house model kit, 3D house preview",
     "tinselpatrol": "Tinsel Patrol, Christmas tree defence game, tower defence, browser game, cat game",
     "flykaitak": "Fly Kai Tak, Kai Tak Airport, Runway 13 IGS approach, Hong Kong flight simulator, browser flight sim",
+    "stuckinline": "Stuck in Line, multiplayer queue game, game about waiting, browser game, global queue",
     "charttv": "Charttv, technical analysis vlog, finance YouTube channel",
     "sleepcap": "Sleep-cap.com, Joomla e-commerce, early e-commerce build",
     "blingvaders": "Blingvaders, retro jewellery brand, viral product launch",
