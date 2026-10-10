@@ -18,6 +18,7 @@ PROJECT_KEYWORDS = {
     "stuckinline": "Stuck in Line, multiplayer queue game, game about waiting, browser game, global queue",
     "readmyspread": "Read My Spread, tarot reading app, tarot spread reader, photo tarot reading, AI tarot",
     "setsoflove": "SetsOfLove, gym dating site, dating for gym-goers, fitness singles, gym profiles",
+    "lanparty1998": "LAN Party 98, LAN party simulator, browser DOOM deathmatch, 1998 LAN party, retro multiplayer, 3D browser game",
     "charttv": "Charttv, technical analysis vlog, finance YouTube channel",
     "sleepcap": "Sleep-cap.com, Joomla e-commerce, early e-commerce build",
     "blingvaders": "Blingvaders, retro jewellery brand, viral product launch",
