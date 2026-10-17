@@ -1009,6 +1009,7 @@ footer p{
   color:var(--muted);
 }
 footer .social-row{margin-top:0;}
+footer .credit{flex-basis:100%;}
 
 @media (max-width:600px){
   .wrap{padding:0 20px;}
