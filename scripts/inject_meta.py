@@ -20,7 +20,7 @@ PROJECT_KEYWORDS = {
     "setsoflove": "SetsOfLove, gym dating site, dating for gym-goers, fitness singles, gym profiles",
     "lanparty1998": "LAN Party 98, LAN party simulator, browser DOOM deathmatch, 1998 LAN party, retro multiplayer, 3D browser game",
     "crossfaderhero": "Crossfader Hero, browser DJ game, DJ simulator, beatmatching practice, virtual DJ decks, 3D browser game",
-    "powerpoint2vid": "PowerPoint2Vid, PowerPoint to video, pptx to video, Google Slides to video, narrated slide video, text-to-speech presentation",
+    "powerpoint2vid": "PowerPoint2Vid, PowerPoint to video, pptx to video, Google Slides to video, AI explainer video, AI-directed video, narrated slide video, text-to-speech presentation",
     "tareeq": "Tareeq, learn Arabic, Arabic language app, Levantine Arabic, Palestinian Arabic, spaced repetition, commute learning, hands-free language learning",
     "malgordon": "malgordon.com, Malcolm Gordon portfolio, personal website, career ledger, static site, GitHub Pages",
     "charttv": "Charttv, technical analysis vlog, finance YouTube channel",
