@@ -1029,3 +1029,18 @@ footer .credit{flex-basis:100%;}
   margin:0 0 10px;
 }
 .project-hero .meta.registered{margin-top:-12px;}
+
+/* Explainer video on project pages */
+.explainer-video{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  background:#000;
+  border-radius:var(--radius);
+  border:1px solid var(--rule);
+}
+.explainer-video.portrait{
+  max-width:420px;
+  margin:0 auto;
+}
