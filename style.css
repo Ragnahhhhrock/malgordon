@@ -1016,3 +1016,16 @@ footer .credit{flex-basis:100%;}
   header.site-head .wrap{flex-direction:column; align-items:flex-start; gap:10px;}
   nav.site-nav a{margin-left:0; margin-right:18px;}
 }
+
+/* -------- project registration date + sort -------- */
+.sort-bar{margin:0 0 24px;}
+.card .registered{
+  display:block;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 10px;
+}
+.project-hero .meta.registered{margin-top:-12px;}
