@@ -1044,3 +1044,34 @@ footer .credit{flex-basis:100%;}
   max-width:420px;
   margin:0 auto;
 }
+
+/* Share bar on project pages */
+.share-bar{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  margin-top:18px;
+}
+.share-label{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.76rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-right:4px;
+}
+.share-btn{
+  display:inline-block;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.76rem;
+  padding:6px 12px;
+  border-radius:20px;
+  border:1px solid var(--rule);
+  color:var(--ink-dim);
+  background:var(--card);
+  text-decoration:none;
+  cursor:pointer;
+  transition:border-color .15s, background .15s, color .15s;
+}
+.share-btn:hover{border-color:var(--gold-dim); background:var(--card-hi); color:var(--gold);}
