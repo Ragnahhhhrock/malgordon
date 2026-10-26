@@ -557,6 +557,16 @@ nav.site-nav a:hover{color:var(--gold); border-color:var(--gold);}
   color:var(--ink);
 }
 .entry.is-hidden{display:none;}
+.card.is-hidden{display:none;}
+.category-bar{margin-bottom:14px;}
+.filter-btn[data-category="all"].active{border-color:var(--ink-dim); color:var(--ink);}
+.filter-count{
+  display:inline-block;
+  margin-left:4px;
+  font-size:0.7rem;
+  color:var(--muted);
+}
+.filter-btn.active .filter-count{color:inherit; opacity:0.75;}
 
 /* -------- the ledger (timeline) -------- */
 .ledger{

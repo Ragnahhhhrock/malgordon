@@ -81,12 +81,26 @@
       <h2>All current projects</h2>
       <span class="count">active</span>
     </div>
+    <div class="filter-bar category-bar" role="group" aria-label="Filter projects by category">
+      <button type="button" class="filter-btn active" data-category="all" aria-pressed="true">All</button>
+      <button type="button" class="filter-btn" data-category="game" aria-pressed="false">Game</button>
+      <button type="button" class="filter-btn" data-category="simulator" aria-pressed="false">Simulator</button>
+      <button type="button" class="filter-btn" data-category="app" aria-pressed="false">App</button>
+      <button type="button" class="filter-btn" data-category="education" aria-pressed="false">Education</button>
+      <button type="button" class="filter-btn" data-category="tool" aria-pressed="false">Tool</button>
+      <button type="button" class="filter-btn" data-category="finance" aria-pressed="false">Finance &amp; Property</button>
+      <button type="button" class="filter-btn" data-category="lifestyle" aria-pressed="false">Lifestyle</button>
+      <button type="button" class="filter-btn" data-category="health" aria-pressed="false">Health</button>
+      <button type="button" class="filter-btn" data-category="ecommerce" aria-pressed="false">E-commerce</button>
+      <button type="button" class="filter-btn" data-category="music" aria-pressed="false">Music</button>
+      <button type="button" class="filter-btn" data-category="website" aria-pressed="false">Website</button>
+    </div>
     <div class="filter-bar sort-bar" role="group" aria-label="Sort projects">
       <button type="button" class="filter-btn active" data-sort="default" aria-pressed="true">Default order</button>
       <button type="button" class="filter-btn" data-sort="registered-asc" aria-pressed="false">Domain registered: oldest → newest</button>
     </div>
     <div class="card-grid">
-      <a class="card" href="../projects/malspace.html" data-registered="">
+      <a class="card" href="../projects/malspace.html" data-category="website" data-registered="">
         <img class="card-thumb" src="../assets/projects/malspace.png" alt="MalSpace" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -99,7 +113,7 @@
         <span class="visit">malgordon.com/malspace →</span>
         </div>
       </a>
-      <a class="card" href="../projects/tarotgoth.html" data-registered="2026-10-08">
+      <a class="card" href="../projects/tarotgoth.html" data-category="app lifestyle" data-registered="2026-10-08">
         <img class="card-thumb" src="../assets/projects/tarotgoth.png" alt="Tarot Goth" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -113,7 +127,7 @@
         <span class="visit">tarotgoth.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/tareeq.html" data-registered="">
+      <a class="card" href="../projects/tareeq.html" data-category="app education" data-registered="">
         <img class="card-thumb" src="../assets/projects/tareeq.png" alt="Tareeq" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -126,7 +140,7 @@
         <span class="visit">Open Tareeq →</span>
         </div>
       </a>
-      <a class="card" href="../projects/powerpoint2vid.html" data-registered="2026-10-21">
+      <a class="card" href="../projects/powerpoint2vid.html" data-category="tool" data-registered="2026-10-21">
         <img class="card-thumb" src="../assets/projects/powerpoint2vid.png" alt="PowerPoint2Vid" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -140,7 +154,7 @@
         <span class="visit">powerpoint2vid.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/malgordon.html" data-registered="2026-08-05">
+      <a class="card" href="../projects/malgordon.html" data-category="website" data-registered="2026-08-05">
         <img class="card-thumb" src="../assets/projects/malgordon.png" alt="malgordon.com" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -154,7 +168,7 @@
         <span class="visit">malgordon.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/crossfaderhero.html" data-registered="2026-10-12">
+      <a class="card" href="../projects/crossfaderhero.html" data-category="game music" data-registered="2026-10-12">
         <img class="card-thumb" src="../assets/projects/crossfaderhero.png" alt="Crossfader Hero" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -168,7 +182,7 @@
         <span class="visit">crossfaderhero.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/lanparty1998.html" data-registered="2026-10-10">
+      <a class="card" href="../projects/lanparty1998.html" data-category="game" data-registered="2026-10-10">
         <img class="card-thumb" src="../assets/projects/lanparty1998.png" alt="LAN Party '98" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -182,7 +196,7 @@
         <span class="visit">lanparty1998.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/setsoflove.html" data-registered="2026-10-07">
+      <a class="card" href="../projects/setsoflove.html" data-category="app lifestyle" data-registered="2026-10-07">
         <img class="card-thumb" src="../assets/projects/setsoflove.png" alt="SetsOfLove" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -196,7 +210,7 @@
         <span class="visit">setsoflove.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/readmyspread.html" data-registered="2026-10-08">
+      <a class="card" href="../projects/readmyspread.html" data-category="app lifestyle" data-registered="2026-10-08">
         <img class="card-thumb" src="../assets/projects/readmyspread.png" alt="Read My Spread" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -210,7 +224,7 @@
         <span class="visit">readmyspread.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/stuckinline.html" data-registered="2026-10-06">
+      <a class="card" href="../projects/stuckinline.html" data-category="game" data-registered="2026-10-06">
         <img class="card-thumb" src="../assets/projects/stuckinline.png" alt="Stuck in Line" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -224,7 +238,7 @@
         <span class="visit">stuckinline.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/flykaitak.html" data-registered="2026-10-02">
+      <a class="card" href="../projects/flykaitak.html" data-category="game simulator" data-registered="2026-10-02">
         <img class="card-thumb" src="../assets/projects/flykaitak.jpg" alt="Fly Kai Tak" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -238,7 +252,7 @@
         <span class="visit">flykaitak.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/tinselpatrol.html" data-registered="2026-09-26">
+      <a class="card" href="../projects/tinselpatrol.html" data-category="game" data-registered="2026-09-26">
         <img class="card-thumb" src="../assets/projects/tinselpatrol.png" alt="Tinsel Patrol" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -252,7 +266,7 @@
         <span class="visit">tinselpatrol.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/brickifymyhome.html" data-registered="2026-09-28">
+      <a class="card" href="../projects/brickifymyhome.html" data-category="app ecommerce" data-registered="2026-09-28">
         <img class="card-thumb" src="../assets/projects/brickifymyhome.png" alt="Brickify My Home" loading="lazy">
         <div class="card-body">
         <span class="status">● building</span>
@@ -266,7 +280,7 @@
         <span class="visit">brickifymyhome.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/outbackrun.html" data-registered="2026-08-28">
+      <a class="card" href="../projects/outbackrun.html" data-category="game simulator" data-registered="2026-08-28">
         <img class="card-thumb" src="../assets/projects/outbackrun.png" alt="Outback Run" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -280,7 +294,7 @@
         <span class="visit">outbackrun.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/offsetcheck.html" data-registered="2026-08-21">
+      <a class="card" href="../projects/offsetcheck.html" data-category="app finance" data-registered="2026-08-21">
         <img class="card-thumb" src="../assets/projects/offsetcheck.png" alt="Offsetcheck" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -295,7 +309,7 @@
         <span class="visit">offsetcheck.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/propcheq.html" data-registered="2026-08-05">
+      <a class="card" href="../projects/propcheq.html" data-category="app finance" data-registered="2026-08-05">
         <img class="card-thumb" src="../assets/projects/propcheq.jpg" alt="Propcheq" loading="lazy">
         <div class="card-body">
         <span class="status">● live</span>
@@ -309,7 +323,7 @@
         <span class="visit">propcheq.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/hornetbay.html" data-registered="2026-07-21">
+      <a class="card" href="../projects/hornetbay.html" data-category="game simulator" data-registered="2026-07-21">
         <img class="card-thumb" src="../assets/projects/hornetbay.jpg" alt="Hornet Bay" loading="lazy">
         <div class="card-body">
         <span class="status">● building</span>
@@ -323,7 +337,7 @@
         <span class="visit">hornetbay.com →</span>
         </div>
       </a>
-      <a class="card" href="../projects/wouldpieteat.html" data-registered="2026-07-08">
+      <a class="card" href="../projects/wouldpieteat.html" data-category="app health" data-registered="2026-07-08">
         <img class="card-thumb" src="../assets/projects/wouldpieteat.png" alt="WouldPietEat" loading="lazy">
         <div class="card-body">
         <span class="status">● building</span>
