@@ -11,7 +11,7 @@
     var sortButtons = sortBar ? Array.prototype.slice.call(sortBar.querySelectorAll("[data-sort]")) : [];
     var catButtons = catBar ? Array.prototype.slice.call(catBar.querySelectorAll("[data-category]")) : [];
 
-    var state = { sort: "default", category: "all" };
+    var state = { sort: "launch-desc", category: "all" };
 
     function categories(card) {
       return (card.getAttribute("data-category") || "").split(" ").filter(Boolean);
@@ -33,14 +33,15 @@
 
     function regKey(card) {
       var d = card.getAttribute("data-registered");
-      return d ? d : "9999-99-99"; // no registered domain: sort last
+      return d ? d : "9999-99-99"; // no launch date: treated as newest
     }
 
     function render() {
       var sorted = cards.slice().sort(function (a, b) {
-        if (state.sort === "registered-asc") {
-          var ka = regKey(a), kb = regKey(b);
-          if (ka !== kb) return ka < kb ? -1 : 1;
+        var ka = regKey(a), kb = regKey(b);
+        if (ka !== kb) {
+          if (state.sort === "registered-asc") return ka < kb ? -1 : 1;
+          if (state.sort === "launch-desc") return ka > kb ? -1 : 1;
         }
         return a.getAttribute("data-order") - b.getAttribute("data-order");
       });
@@ -60,6 +61,8 @@
         btn.setAttribute("aria-pressed", on ? "true" : "false");
       });
     }
+
+    render();
 
     sortButtons.forEach(function (btn) {
       btn.addEventListener("click", function () {
