@@ -1085,3 +1085,89 @@ footer .credit{flex-basis:100%;}
   transition:border-color .15s, background .15s, color .15s;
 }
 .share-btn:hover{border-color:var(--gold-dim); background:var(--card-hi); color:var(--gold);}
+
+/* -------- project briefing form (contact page) -------- */
+.briefing-intro{
+  margin:0 0 34px;
+  color:var(--ink-dim);
+  line-height:1.6;
+}
+.briefing-min{
+  display:inline-block;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.82rem;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  color:var(--gold);
+  border:1px solid var(--gold-dim);
+  border-radius:var(--radius);
+  padding:6px 12px;
+  margin:0 0 18px;
+}
+.form-group{
+  border:0;
+  margin:0;
+  padding:0;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+.form-group legend{
+  width:100%;
+  padding:0 0 10px;
+  margin:0 0 4px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.8rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--gold);
+  border-bottom:1px solid var(--rule);
+}
+.form-row select{
+  font-family:'IBM Plex Sans', sans-serif;
+  font-size:1.15rem;
+  color:var(--ink);
+  background-color:var(--card);
+  border:1px solid var(--rule);
+  border-radius:var(--radius);
+  padding:18px 48px 18px 20px;
+  appearance:none;
+  -webkit-appearance:none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:calc(100% - 26px) 50%, calc(100% - 20px) 50%;
+  background-size:6px 6px, 6px 6px;
+  background-repeat:no-repeat;
+  transition:border-color .15s, background-color .15s;
+  cursor:pointer;
+}
+.form-row select:focus{
+  outline:none;
+  border-color:var(--gold);
+  background-color:var(--card-hi);
+}
+.form-row .opt{
+  color:var(--muted);
+  text-transform:none;
+  letter-spacing:0;
+}
+.form-hint{
+  margin:0;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem;
+  line-height:1.5;
+  color:var(--muted);
+}
+.form-gate{
+  margin:0;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.9rem;
+  line-height:1.5;
+  color:var(--rust);
+  border:1px solid var(--rust);
+  border-radius:var(--radius);
+  padding:12px 16px;
+}
+.form-gate[hidden]{display:none;}

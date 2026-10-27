@@ -49,7 +49,7 @@
 <meta name="twitter:description" content="Get in touch with Malcolm Gordon — startup mentor and growth marketer in Perth, Western Australia.">
 <meta name="twitter:image" content="https://malgordon.com/assets/social-share.png">
 
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 
@@ -75,6 +75,7 @@
     <p class="lede">
       Got a project, or just want to talk shop? Drop a note below —
       it goes straight to my inbox — or reach out on any of the socials in the footer.
+      Looking to hire me for marketing or growth work? Use the <a href="#briefing">project briefing form</a>.
     </p>
   </div>
 </section>
@@ -100,6 +101,164 @@
 
       <button type="submit" class="btn-outline-gold" style="align-self:flex-start;" id="contact-submit">Send message →</button>
       <p id="contact-status" class="contact-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="briefing">
+  <div class="wrap" style="max-width:600px;">
+    <div class="section-head">
+      <h2>Project briefing</h2>
+    </div>
+    <span class="briefing-min">Minimum engagement: $2,000 AUD / month</span>
+    <p class="briefing-intro">
+      For paid marketing, analytics, automation and growth work. Complete this form so I can
+      assess fit and respond with availability and rates. Budgets below are per month, in AUD.
+    </p>
+
+    <form id="briefing-form" action="https://formspree.io/f/xqpzkyqv" method="POST" class="contact-form">
+      <fieldset class="form-group">
+        <legend>01 · About you</legend>
+        <div class="form-row">
+          <label for="b-name">Name</label>
+          <input type="text" id="b-name" name="name" placeholder="Your name" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="b-role">Role</label>
+          <input type="text" id="b-role" name="role" placeholder="e.g. Marketing manager" autocomplete="organization-title">
+        </div>
+        <div class="form-row">
+          <label for="b-org">Organisation</label>
+          <input type="text" id="b-org" name="organisation" placeholder="Organisation name" required autocomplete="organization">
+        </div>
+        <div class="form-row">
+          <label for="b-site">Website <span class="opt">(optional)</span></label>
+          <input type="url" id="b-site" name="website" placeholder="https://example.com" autocomplete="url">
+        </div>
+        <div class="form-row">
+          <label for="b-email">Work email</label>
+          <input type="email" id="b-email" name="email" placeholder="you@organisation.com" required autocomplete="email">
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend>02 · The project</legend>
+        <div class="form-row">
+          <label for="b-service">Service needed</label>
+          <select id="b-service" name="service" required>
+            <option value="">Select a service</option>
+            <option>Paid search (Google Ads)</option>
+            <option>Analytics and tracking</option>
+            <option>Marketing automation</option>
+            <option>Growth strategy</option>
+            <option>Website build</option>
+            <option>Startup mentoring</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="b-problem">Problem to solve</label>
+          <textarea id="b-problem" name="problem" rows="6" minlength="80" required placeholder="Describe the problem or goal in your own words. Include your audience and any constraints."></textarea>
+          <p class="form-hint">Minimum 80 characters.</p>
+        </div>
+        <div class="form-row">
+          <label for="b-setup">Current setup <span class="opt">(optional)</span></label>
+          <textarea id="b-setup" name="current_setup" rows="4" placeholder="Platforms, existing accounts, tools, in-house team or agency."></textarea>
+        </div>
+        <div class="form-row">
+          <label for="b-success">Success measure <span class="opt">(optional)</span></label>
+          <textarea id="b-success" name="success_measure" rows="3" placeholder="What result would make this worthwhile?"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend>03 · Budget and timing</legend>
+        <div class="form-row">
+          <label for="b-marketing-spend">Current monthly spend on marketing and growth <span class="opt">(optional)</span></label>
+          <select id="b-marketing-spend" name="monthly_marketing_spend">
+            <option value="">Select a range</option>
+            <option>Nothing yet</option>
+            <option>Under $2,000</option>
+            <option>$2,000-$5,000</option>
+            <option>$5,000-$10,000</option>
+            <option>$10,000-$25,000</option>
+            <option>$25,000-$50,000</option>
+            <option>$50,000+</option>
+            <option>Not sure</option>
+          </select>
+          <p class="form-hint">Include staff, agencies, tools and ad spend.</p>
+        </div>
+        <div class="form-row">
+          <label for="b-ad-spend">Monthly ad spend <span class="opt">(optional)</span></label>
+          <select id="b-ad-spend" name="monthly_ad_spend">
+            <option value="">Select a range</option>
+            <option>Not running ads</option>
+            <option>Under $2,000</option>
+            <option>$2,000-$5,000</option>
+            <option>$5,000-$10,000</option>
+            <option>$10,000-$25,000</option>
+            <option>$25,000+</option>
+          </select>
+          <p class="form-hint">Media budget paid to platforms. This is separate from my fee.</p>
+        </div>
+        <div class="form-row">
+          <label for="b-fee-budget">Monthly budget for this engagement</label>
+          <select id="b-fee-budget" name="monthly_fee_budget" required>
+            <option value="">Select a range</option>
+            <option value="under-2000">Under $2,000 / month</option>
+            <option value="2000-4999">$2,000-$4,999 / month</option>
+            <option value="5000-9999">$5,000-$9,999 / month</option>
+            <option value="10000-plus">$10,000+ / month</option>
+          </select>
+          <p class="form-hint">What you can invest in my services, excluding ad spend.</p>
+        </div>
+        <p id="briefing-gate" class="form-gate" role="alert" hidden>
+          My minimum engagement is $2,000 per month. I can't take this on at a lower budget.
+          If your budget changes, you're welcome to submit this form again.
+        </p>
+        <div class="form-row">
+          <label for="b-engagement">Engagement type</label>
+          <select id="b-engagement" name="engagement_type">
+            <option value="">Select a type</option>
+            <option>Ongoing monthly retainer</option>
+            <option>Fixed-term project</option>
+            <option>Not sure</option>
+          </select>
+          <p class="form-hint">Retainers run for a minimum of 3 months.</p>
+        </div>
+        <div class="form-row">
+          <label for="b-start">Desired start <span class="opt">(optional)</span></label>
+          <select id="b-start" name="desired_start">
+            <option value="">Select a timeframe</option>
+            <option>Within 2 weeks</option>
+            <option>Within 1-2 months</option>
+            <option>3+ months</option>
+            <option>Just exploring</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="b-decision">Decision-maker <span class="opt">(optional)</span></label>
+          <select id="b-decision" name="decision_maker">
+            <option value="">Select one</option>
+            <option>I approve the budget</option>
+            <option>I need sign-off from someone else</option>
+            <option>Shared decision</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="b-source">How did you find me? <span class="opt">(optional)</span></label>
+          <input type="text" id="b-source" name="referral_source" placeholder="Referral, search, LinkedIn, etc.">
+        </div>
+      </fieldset>
+
+      <!-- honeypot field: hidden from real users, bots tend to fill it in -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="New project briefing from malgordon.com">
+      <input type="hidden" name="form_type" value="project-briefing">
+      <input type="hidden" name="email_type" id="b-email-type" value="">
+
+      <button type="submit" class="btn-outline-gold" style="align-self:flex-start;" id="briefing-submit">Submit briefing →</button>
+      <p id="briefing-status" class="contact-status" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
@@ -155,6 +314,80 @@
       btn.textContent = "Send message →";
       if (typeof gtag === "function") {
         gtag("event", "contact_form_submit", { status: "error" });
+      }
+    });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var form = document.getElementById("briefing-form");
+  if (!form) return;
+  var status = document.getElementById("briefing-status");
+  var btn = document.getElementById("briefing-submit");
+  var budget = document.getElementById("b-fee-budget");
+  var gate = document.getElementById("briefing-gate");
+  var email = document.getElementById("b-email");
+  var emailType = document.getElementById("b-email-type");
+  var webmail = ["gmail.com", "googlemail.com", "outlook.com", "hotmail.com", "live.com",
+                 "yahoo.com", "yahoo.com.au", "icloud.com", "me.com", "proton.me",
+                 "protonmail.com", "aol.com", "bigpond.com", "optusnet.com.au"];
+  var defaultLabel = btn.textContent;
+
+  function belowMinimum() { return budget.value === "under-2000"; }
+
+  function applyGate() {
+    var blocked = belowMinimum();
+    gate.hidden = !blocked;
+    btn.disabled = blocked;
+    if (blocked) {
+      status.textContent = "";
+      status.className = "contact-status";
+      if (typeof gtag === "function") {
+        gtag("event", "briefing_below_minimum", {});
+      }
+    }
+  }
+
+  budget.addEventListener("change", applyGate);
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (belowMinimum()) { applyGate(); return; }
+
+    var domain = (email.value.split("@")[1] || "").toLowerCase();
+    emailType.value = webmail.indexOf(domain) !== -1 ? "webmail" : "organisation";
+
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    status.textContent = "";
+    status.className = "contact-status";
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    }).then(function (response) {
+      if (response.ok) {
+        form.reset();
+        gate.hidden = true;
+        status.textContent = "Thanks. Your briefing has been received. I'll reply with availability and rates if it's a fit.";
+        status.classList.add("success");
+        btn.textContent = "Sent ✓";
+        if (typeof gtag === "function") {
+          gtag("event", "briefing_form_submit", { status: "success" });
+        }
+      } else {
+        throw new Error("submit failed");
+      }
+    }).catch(function () {
+      status.textContent = "Something went wrong. Please email mal@malgordon.com directly.";
+      status.classList.add("error");
+      btn.disabled = false;
+      btn.textContent = defaultLabel;
+      if (typeof gtag === "function") {
+        gtag("event", "briefing_form_submit", { status: "error" });
       }
     });
   });
