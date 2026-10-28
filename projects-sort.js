@@ -32,8 +32,9 @@
     });
 
     function regKey(card) {
-      var d = card.getAttribute("data-registered");
-      return d ? d : "9999-99-99"; // no launch date: treated as newest
+      // Launch date first; undated cards fall back to the date they were added to the site.
+      var d = card.getAttribute("data-registered") || card.getAttribute("data-added");
+      return d ? d : "9999-99-99"; // no date at all: treated as newest
     }
 
     function render() {
