@@ -24,6 +24,7 @@ PROJECT_KEYWORDS = {
     "tareeq": "Tareeq, learn Arabic, Arabic language app, Levantine Arabic, Palestinian Arabic, spaced repetition, commute learning, hands-free language learning",
     "projectx15": "Project X-15, X-15 rocket plane, X-15 flight simulator, browser flight sim, XLR99, Edwards AFB",
     "pumpkinsmash": "Pumpkin Smash, Halloween game, pumpkin smashing game, mobile tap game, free browser game, whack-a-mole style game",
+    "ismercuryretro": "Is Mercury Retrograde, Mercury retrograde today, is Mercury in retrograde, Mercury retrograde dates, retrograde calendar, Mercury shadow period",
     "malgordon": "malgordon.com, Malcolm Gordon portfolio, personal website, career ledger, static site, GitHub Pages",
     "charttv": "Charttv, technical analysis vlog, finance YouTube channel",
     "sleepcap": "Sleep-cap.com, Joomla e-commerce, early e-commerce build",
