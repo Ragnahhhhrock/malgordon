@@ -43,6 +43,12 @@
     var blocks = Array.prototype.slice.call(document.querySelectorAll("#stats .stat-block"));
     if (!blocks.length) return;
 
+    // Stats backed by live page content (e.g. the project count) read their value from the DOM.
+    Array.prototype.forEach.call(document.querySelectorAll("#stats [data-count-source]"), function (el) {
+      var n = document.querySelectorAll(el.getAttribute("data-count-source")).length;
+      if (n > 0) el.textContent = String(n);
+    });
+
     var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (reduceMotion) {
