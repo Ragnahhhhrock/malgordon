@@ -26,6 +26,7 @@ PROJECT_KEYWORDS = {
     "pumpkinsmash": "Pumpkin Smash, Halloween game, pumpkin smashing game, mobile tap game, free browser game, whack-a-mole style game",
     "ismercuryretro": "Is Mercury Retrograde, Mercury retrograde today, is Mercury in retrograde, Mercury retrograde dates, retrograde calendar, Mercury shadow period",
     "breakdancehero": "Breakdance Hero, breakdancing game, rhythm game, 80s electro game, b-boy game, free browser game, mobile rhythm game",
+    "striketris": "StrikeTris, Tetris meets Counter-Strike, arena shooter, browser shooter, falling blocks game, team shooter, free browser game",
     "malgordon": "malgordon.com, Malcolm Gordon portfolio, personal website, career ledger, static site, GitHub Pages",
     "charttv": "Charttv, technical analysis vlog, finance YouTube channel",
     "sleepcap": "Sleep-cap.com, Joomla e-commerce, early e-commerce build",
