@@ -1,0 +1,6 @@
+name = "malgordon-contact"
+main = "contact-worker.js"
+compatibility_date = "2026-11-01"
+
+[[send_email]]
+name = "EMAIL"
