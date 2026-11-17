@@ -99,6 +99,7 @@
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <input type="hidden" name="_subject" value="New message from malgordon.com">
 
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAGF6g2TF2JRMYtWo"></div>
       <button type="submit" class="btn-outline-gold" style="align-self:flex-start;" id="contact-submit">Send message →</button>
       <p id="contact-status" class="contact-status" role="status" aria-live="polite"></p>
     </form>
@@ -257,6 +258,7 @@
       <input type="hidden" name="form_type" value="project-briefing">
       <input type="hidden" name="email_type" id="b-email-type" value="">
 
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAGF6g2TF2JRMYtWo"></div>
       <button type="submit" class="btn-outline-gold" style="align-self:flex-start;" id="briefing-submit">Submit briefing →</button>
       <p id="briefing-status" class="contact-status" role="status" aria-live="polite"></p>
     </form>
@@ -265,7 +267,7 @@
 
 <footer id="contact-footer">
   <div class="wrap">
-    <p>© 2026 Malcolm Gordon · Perth, WA · mal@malgordon.com</p>
+    <p>© 2026 Malcolm Gordon · Perth, WA · <a href="/contact.html">Contact</a></p>
     <div class="social-row">
       <a href="https://x.com/malgordon/" target="_blank" rel="noopener">X</a>
       <a href="https://www.linkedin.com/in/malcolmgordon/" target="_blank" rel="noopener">LinkedIn</a>
@@ -308,10 +310,11 @@
         throw new Error("submit failed");
       }
     }).catch(function () {
-      status.textContent = "Something went wrong — please email mal@malgordon.com directly.";
+      status.textContent = "Something went wrong. Please complete the check and try again.";
       status.classList.add("error");
       btn.disabled = false;
       btn.textContent = "Send message →";
+      if (window.turnstile) turnstile.reset();
       if (typeof gtag === "function") {
         gtag("event", "contact_form_submit", { status: "error" });
       }
@@ -382,10 +385,11 @@
         throw new Error("submit failed");
       }
     }).catch(function () {
-      status.textContent = "Something went wrong. Please email mal@malgordon.com directly.";
+      status.textContent = "Something went wrong. Please complete the check and try again.";
       status.classList.add("error");
       btn.disabled = false;
       btn.textContent = defaultLabel;
+      if (window.turnstile) turnstile.reset();
       if (typeof gtag === "function") {
         gtag("event", "briefing_form_submit", { status: "error" });
       }
@@ -394,6 +398,7 @@
 })();
 </script>
 
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script src="theme.js"></script>
 <script src="analytics-events.js?v=2"></script>
 </body>

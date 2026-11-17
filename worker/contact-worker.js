@@ -39,6 +39,17 @@ export default {
     // Honeypot: pretend success so bots move on.
     if (form.get("_gotcha")) return json({ ok: true }, 200, origin);
 
+    // Turnstile
+    const ts = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      body: new URLSearchParams({
+        secret: String(env.TURNSTILE_SECRET ?? "").replace(/\s+/g, ""),
+        response: String(form.get("cf-turnstile-response") ?? ""),
+        remoteip: request.headers.get("CF-Connecting-IP") || "",
+      }),
+    }).then((r) => r.json()).catch(() => ({ success: false }));
+    if (!ts.success) return json({ ok: false, error: "captcha" }, 400, origin);
+
     const subject = header(form.get("_subject") || "New message from malgordon.com");
     const email = header(form.get("email"));
     const name = header(form.get("name"));
@@ -46,7 +57,7 @@ export default {
 
     const lines = [];
     for (const [key, value] of form.entries()) {
-      if (key.startsWith("_") || typeof value !== "string") continue;
+      if (key.startsWith("_") || key === "cf-turnstile-response" || typeof value !== "string") continue;
       lines.push(`${key}: ${clean(value, 5000)}`);
     }
     const body = lines.join("\n\n");

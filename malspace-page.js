@@ -114,7 +114,7 @@
       '<div class="ms-module-title">Contacting Malcolm Gordon</div>' +
       '<div class="ms-module-body">' +
       '<ul class="ms-contact-list">' +
-      '<li><a href="mailto:mal@malgordon.com">Send Message</a></li>' +
+      '<li><a href="/contact.html">Send Message</a></li>' +
       '<li><a href="/contact.html">Add to Friends</a></li>' +
       '<li class="disabled">Instant Message (offline)</li>' +
       '<li class="disabled">Add to Group</li>' +
