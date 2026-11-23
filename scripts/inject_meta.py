@@ -28,6 +28,7 @@ PROJECT_KEYWORDS = {
     "breakdancehero": "Breakdance Hero, breakdancing game, rhythm game, 80s electro game, b-boy game, free browser game, mobile rhythm game",
     "ranairwing": "Ran Air Wing, HMAS Melbourne, R21 aircraft carrier, A-4G Skyhawk, carrier flight simulator, Royal Australian Navy, browser flight sim",
     "striketris": "StrikeTris, Tetris meets Counter-Strike, arena shooter, browser shooter, falling blocks game, team shooter, free browser game",
+    "30products30days": "30 Products in 30 Days, product challenge, ship a product a day, build in public, 30 day challenge",
     "malgordon": "malgordon.com, Malcolm Gordon portfolio, personal website, career ledger, static site, GitHub Pages",
     "charttv": "Charttv, technical analysis vlog, finance YouTube channel",
     "sleepcap": "Sleep-cap.com, Joomla e-commerce, early e-commerce build",
